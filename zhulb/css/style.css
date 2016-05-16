@@ -1,0 +1,4 @@
+.nav-menu-wrapper{background-color: #202020;position: fixed;box-sizing:border-box;}
+nav a{display: block;margin-top: 0.5rem;}
+nav ul li{color: #fff;float: left;margin: 0 1rem;line-height: 3rem;cursor: pointer;}
+nav ul li:hover{background-color: #ffc600;}
