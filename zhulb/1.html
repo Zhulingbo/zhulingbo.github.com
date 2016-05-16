@@ -12,11 +12,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="cleartype" content="on">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <script type="text/javascript" src=""></script>
+    <link rel="stylesheet" href="css/common.css">
     <script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+<!-- container -->
+<nav class="clearfix">
+    <div class="logo">
+        <img src="img/logo.png" width="100%">
+    </div>
+    <ul>
+        <li class="nav_active">首页</li>
+        <li>作品</li>
+        <li>关于</li>
+    </ul>
+</nav>
+<!-- banner -->
+<div class="banner">
+    <img src="img/banner.jpg" width="100%">
+</div>
+<!-- banner -->
+<!-- container -->
 <script src="js/app.min.js" id="appjs" data-adapt="1" ></script>
 <script type="text/javascript">
 jQuery(document).ready(function($) {
@@ -25,6 +42,10 @@ jQuery(document).ready(function($) {
 		}).on('touchmove.elasticity', function (e) {
 		e.preventDefault();
 	});
+    $("nav ul li").on('click',function(){
+        $(this).addClass('nav_active');
+        $(this).siblings().removeClass('nav_active');
+    })
 });
 </script>
 </body>
