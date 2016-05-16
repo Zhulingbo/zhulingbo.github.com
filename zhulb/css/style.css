@@ -1,3 +1,4 @@
+html,body,.container{width: 100%;position: relative;background-color: #000;}
 nav{width: 100%;height: 2.1rem;background-color: #202020;padding: 0 1rem;box-sizing:border-box;position: fixed;}
 .logo{width: 26%;float: left;margin-top: 0.25rem;}
 nav ul{width: 53%;height: 100%;float: right}
@@ -9,4 +10,4 @@ nav ul li{width: 33.3%;height: 100%;line-height: 2.1rem;float: left;text-align: 
 .loading-img{width: 100%;position: absolute;left: 0;top: 0;z-index: 10;height: 100%}
 .loading{height: 100%;position: absolute;left: 0;top: 0;background-color: #000;}
 
-.main{width: 100%;height: 20rem;background-color: #ccc;}
+.main{width: 100%;height: 20rem;}
