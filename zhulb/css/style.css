@@ -1,6 +1,8 @@
 nav{width: 100%;height: 2.1rem;background-color: #202020;padding: 0 1rem;box-sizing:border-box;}
-.logo{width: 26%;float: left;margin-top: 0.25rem;}
+.logo{width: 26%;float: left;margin-top: 0.25rem;position: fixed;}
 nav ul{width: 53%;height: 100%;float: right}
 nav ul li{width: 33.3%;height: 100%;line-height: 2.1rem;float: left;text-align: center;font-size: 0.8rem;color: #fff;}
 .nav_active{background-color: #ffc600;color: #000;}
 .banner{width: 100%;}
+
+.main{width: 100%;height: 10rem;background-color: #cccs;}
