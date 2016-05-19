@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>The North Face</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/common.css" />
+</head>
+<body>
+<!-- container -->
+<div class="container share_back">
+    <img src="img/share_back.jpg" width="100%">
+</div>
+<!-- container -->
+<script src="js/app.js" id="appjs" data-adapt="1" ></script>
+<script type="text/javascript">
+$(function() {
+    $('body').on('touchmove', function (event) {
+        event.preventDefault();
+    });
+    setTimeout(function(){
+        $(".go1").addClass('go1_move')
+    },0)
+    setTimeout(function(){
+        $(".go2").addClass('go2_move')
+    },500)
+});
+</script>
+</body>
+</html>

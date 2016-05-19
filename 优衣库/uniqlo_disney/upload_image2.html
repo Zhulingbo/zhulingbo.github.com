@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>KFC</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" href="css/common.css">
+    <script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
+    <script type="text/javascript" src="js/hammer.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<!-- container -->
+<div class="container photo_page">
+  <div class="photo_box">
+    <img src="img/photo_frame.png" width="100%" class="photo_frame">
+    <div id="pic"></div>
+  </div>
+  <div class="btn clearfix">
+    <input type="file" id="file_input" class="change"/>
+    <span class="c">
+      <img src="img/change_one.png" width="100%">
+    </span>
+    <a href="javascript:;" class="finish">
+      <img src="img/finish.png" width="100%">
+    </a>
+  </div>
+</div>
+<div id="result"></div>
+<!-- container -->
+<script src="js/app.min.js" id="appjs" data-adapt="1" ></script>
+<script type="text/javascript">
+$(function() {
+    $('body').on('touchmove', function (event) {
+        event.preventDefault();
+    });
+});
+</script>
+</body>
+</html>

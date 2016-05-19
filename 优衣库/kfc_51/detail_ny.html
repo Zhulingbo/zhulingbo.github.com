@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>The North Face</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/hidpi-canvas.min.js"></script>
+    <script type="text/javascript" src="js/jquery.base64.js"></script>
+    <script type="text/javascript" src="js/canvas2image.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/common.css" />
+</head>
+<body>
+<!-- mask -->
+<div class="mask">
+    <img src="img/mask_pic.png" class="share_pic">
+</div>
+<!-- mask -->
+<!-- container -->
+<div class="container detail">
+    <header>
+        <img src="img/logo.png" class="logo">
+        <div class="user clearfix">
+            <div class="head"><img src="img/head.jpg" width="100%"></div>
+            <span class="name">
+                终极大师
+            </span>
+        </div>
+    </header>
+    <div class="pic">
+        <canvas id="mycanvas" download="my_file.png" width="375" height="375"></canvas>
+    </div>
+    <div class="txt">
+        <p>我在漂洋过海时吃着炸鸡，而此时此刻你在哪里！<b class="hot">#叫我都市野心家#</b></p>
+        <a href="javascript:;" class="my_trip">
+            <img src="img/my_trip.png" width="100%">
+        </a>
+        <img src="img/put.png" class="touch">
+    </div>
+    <img src="img/bar2.jpg" alt="" class="bar2">
+    <img src="img/tong.png" alt="" class="tong">
+</div>
+<!-- container -->
+<script src="js/app.js" id="appjs" data-adapt="1" ></script>
+<script type="text/javascript">
+$('body').on('touchmove', function (event) {
+        event.preventDefault();
+});
+// var rem = window.innerWidth / 320*20;
+var canvas = document.getElementById("mycanvas")
+var ctx = canvas.getContext("2d");
+//polyfill 提供了这个方法用来获取设备的 pixel ratio
+var getPixelRatio = function(context) {
+    var backingStore = context.backingStorePixelRatio ||
+        context.webkitBackingStorePixelRatio ||
+        context.mozBackingStorePixelRatio ||
+        context.msBackingStorePixelRatio ||
+        context.oBackingStorePixelRatio ||
+        context.backingStorePixelRatio || 1;
+    return (window.devicePixelRatio || 1) / backingStore;
+};
+var ratio = getPixelRatio(ctx);
+var img = new Image();
+// canvas.width =16*rem ;
+// canvas.height = 16.15*rem;
+img.src="img/ny_bg.jpg";
+img.onload = function(){
+    ctx.drawImage(img, 0, 0,375*ratio,375*ratio);
+    ctx.font="bold 0.6rem Microsoft Yahei,arial";
+    ctx.textAlign="center";
+    ctx.fillStyle="#737373";
+    ctx.fillText("zhulingbo",205,188);
+}
+$("#mycanvas").attr("download","file.png");
+    // var oCanvas = document.getElementById("mycanvas"); 
+$("canvas").on('touchend',function(){
+    alert(111);
+    // Canvas2Image.saveAsPNG(canvas);
+    var dataUrl = canvas.toDataURL();
+    $("canvas").attr('href', dataUrl);
+})
+$(".my_trip").on('click',function(){
+    $(".mask").show();
+})
+$(".mask").on('click',function(){
+    $(".mask").hide();
+})
+</script>
+</body>
+</html>

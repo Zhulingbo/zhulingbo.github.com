@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>KFC</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" href="css/common.css">
+    <script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
+    <script type="text/javascript" src="js/hammer.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<!-- container -->
+<div class="container home">
+    <p> 
+   <label>请选择一个图像文件：</label> 
+   <input type="file" id="file_input" /> 选择图片的input按钮
+</p>  
+<div id="rrr" class="pan"><!-- <img src="img/img.jpg" alt=""> --></div>
+</div>
+<div id="result"></div>
+<!-- container -->
+<script src="js/app.min.js" id="appjs" data-adapt="1" ></script>
+<script type="text/javascript">
+$(function() {
+    $('body').on('touchmove', function (event) {
+        event.preventDefault();
+    });
+    var aaa = document.getElementById("rrr"); //获取显示图片的div元素
+    var input = document.getElementById("file_input"); //获取选择图片的input元素
+
+    //这边是判断本浏览器是否支持这个API。
+    if(typeof FileReader==='undefined'){ 
+    aaa.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+    input.setAttribute('disabled','disabled'); 
+    }else{ 
+    input.addEventListener('change',readFile,false); //如果支持就监听改变事件，一旦改变了就运行readFile函数。
+    } 
+
+
+    function readFile(){ 
+    var file = this.files[0]; //获取file对象
+    //判断file的类型是不是图片类型。
+    if(!/image\/\w+/.test(file.type)){ 
+    alert("文件必须为图片！"); 
+    return false; 
+    } 
+
+    var reader = new FileReader(); //声明一个FileReader实例
+    reader.readAsDataURL(file); //调用readAsDataURL方法来读取选中的图像文件
+    //最后在onload事件中，获取到成功读取的文件内容，并以插入一个img节点的方式显示选中的图片
+    reader.onload = function(e){ 
+    aaa.innerHTML = '<img src="'+this.result+'" width="" id="111"/>' 
+    } 
+    }
+    // var hammertime = new Hammer(document.getElementById("rrr"));
+    // //添加事件
+    // hammertime.on("pan", function (e) {
+    //  console.log(e);
+    // });
+    // var imgs=document.createElement("img");
+    // imgs.src="img/img.jpg";
+    // $(".pan").append(imgs);
+    // var imgW = $('.pan img').width();
+    // alert(imgW);
+  (function() {
+    // var imgW = $('.pan img').width();
+    // alert(imgW);
+    var img, margin;
+    new Hammer( $( ".pan" )[ 0 ], {
+      domEvents: true
+    } );
+    $( ".pan" ).on( "panstart", function( e ) {
+      img = $( ".pan img" );
+      margin = parseInt( img.css( "margin-left" ), 10 );
+    } );
+    $( ".pan" ).on( "pan", function( e ) {
+    console.log( "pan" );
+      var delta = margin + e.originalEvent.gesture.deltaX;
+      console.log( delta );
+      if ( delta >= -580+$(window).width()*0.8 && delta <= -0 ) {
+         img.css( {
+        "margin-left": margin + e.originalEvent.gesture.deltaX
+      } ); 
+      }
+    } );
+  })();
+  //
+  (function() {
+    var ham = new Hammer( $( ".pan" )[ 0 ], {
+      domEvents: true
+    } );
+    var width = 640;
+    var height = 1008;
+    var left = 0;
+    var top = 0;
+    ham.get('pinch').set({ enable: true });
+    $( ".pan" ).on( "pinch", function( e ) {
+      console.log( "pinch" );
+       if ( width * e.originalEvent.gesture.scale >= 300 ) {
+       $( this ).find( "img" ).css({
+         width: width * e.originalEvent.gesture.scale,
+         "margin-left": -left * e.originalEvent.gesture.scale,
+         height: height * e.originalEvent.gesture.scale,
+         "margin-top": -top * e.originalEvent.gesture.scale
+       });
+       }
+       console.log( e.originalEvent.gesture.scale );
+    } );
+    $( ".pan" ).on( "pinchend", function( e ) {
+      width = width * e.originalEvent.gesture.scale;
+      height = height * e.originalEvent.gesture.scale;
+      left = left * e.originalEvent.gesture.scale;
+      top = top * e.originalEvent.gesture.scale;
+      console.log( width );
+    } );
+  } )();
+});
+
+</script>
+</body>
+</html>
