@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>KFC</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" href="css/common.css">
+    <script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
+    <script type="text/javascript" src="js/hammer.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <style type="text/css">
+      html,body,.container{width: 100%;height: auto;overflow: visible;position: relative;}
+    </style>
+</head>
+<body>
+<div class="code_mask">
+  <div class="box">
+      <a href="javascript:;" class="close">
+        <img src="img/close.png" width="100%">
+      </a>
+      <p class="txt1">长按下方二维码<br>
+关注<em>优衣库官方微信</em></p>
+    <img src="img/qr_code.jpg" class="qr">
+    <img src="img/qr_txt2.png" class="txt2">
+  </div>
+</div>
+<!-- container -->
+<div class="container result friend">
+  <img src="img/logo.png" class="logo">
+  <p class="people">我的梦想即将实现！<br>
+已经有<em>99</em>人为我点赞，就差你啦！</p>
+  <img src="img/result_img.jpg" class="pic">
+  <div class="txt">
+    <p>人气越高的用户赢取惊喜体验的机会越大哦！</p>
+  </div>
+  <div class="btn clearfix">
+    <a href="javascript:;" class="zan zaned"></a>
+    <a href="javascript:;" class="play"></a>
+  </div>
+  <div class="tx_box">
+    <img src="img/result_tx.png" width="100%">
+    <a href="javascript:;" class="more">
+      查看更多商品
+    </a>
+  </div>
+</div>
+<div id="result"></div>
+<!-- container -->
+<script src="js/app.min.js" id="appjs" data-adapt="1" ></script>
+<script type="text/javascript">
+$(function() {
+    $('.code_mask').on('touchmove ', function (event) {
+        event.preventDefault();
+    });
+    $(".attention").on('click',function(){
+      $(".code_mask").show();
+    })
+    $(".close").on('click',function(){
+      $(".code_mask").hide();
+    })
+});
+</script>
+</body>
+</html>
