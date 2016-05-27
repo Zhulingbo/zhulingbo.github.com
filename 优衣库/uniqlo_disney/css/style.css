@@ -76,8 +76,9 @@ background-size: 100%;position: absolute;left:0.5rem;top: 0;opacity: 0;z-index: 
 
 
 
-@media only screen and (width:414px ) {
+/*@media only screen and (width:414px ) {
     canvas{-webkit-transform:scale(1.1);-webkit-transform-origin:0% 0%;}
 }
 @media only screen and (width:320px ) {
     canvas{-webkit-transform:scale(0.853);-webkit-transform-origin:0% 0%;}
+}*/
