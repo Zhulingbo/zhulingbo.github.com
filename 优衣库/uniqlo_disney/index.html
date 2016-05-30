@@ -107,6 +107,32 @@ $(function() {
 //            show.innerHTML += e.scale+'\n';
                 reqAnimationFrame();
             }
+
+
+
+        function controlStart(){
+            var orientation = exif ? exif.Orientation : 1;
+            switch(orientation) {
+                case 3:
+                    imgRotation = 180;
+                    break;
+                case 6:
+                    imgRotation = 90;
+                    break;
+                case 8:
+                    imgRotation = 270;
+                    break;
+                default:
+                    imgRotation = 0;
+                    break;
+            }
+
+            var rot = imgRotation || 0;
+//            alert(rot);
+            if(timer) clearTimeout(timer);
+            ctx.drawImage(img2, 0, 0,canvas.width,canvas.height);
+            controlImage(img);
+        }
         }
     //canvas 触控
     //----------------------------------------------------
