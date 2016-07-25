@@ -19,7 +19,7 @@ html,body,.container{width: 100%;position: relative;background-color: #f0f0f0;}
 /*.product_btn{width: 100%;padding: 0.5rem;box-sizing:border-box;}
 .product_btn a{width: 48%;height: 5rem;background-color: #fff;border-radius: 4px;display: block;float: left;margin-bottom: 0.5rem;box-shadow: 1px 1px 1px #686868}
 .product_btn a:nth-child(2n){float: right;}*/
-.product_txt{width: 90%;margin: 1rem auto auto auto;position: relative;display: inline-block;}
+.product_txt{width: 90%;margin: 1rem auto auto 0.5rem;position: relative;display: inline-block;}
 .product_txt .icon{width: 1.5rem;display: block;position: absolute;left: 5%;top: 50%;-webkit-transform: translateY(-50%);}
 .product_txt .txt{width: 11.5rem;float: right;position: relative;}
 .product_txt .txt h3{font-size: 0.6rem;font-weight: 700;text-align: left;width: 100%;color: #797979;margin-bottom: 0.25rem;}
@@ -35,7 +35,7 @@ html,body,.container{width: 100%;position: relative;background-color: #f0f0f0;}
 .call_us .main{width: 75%;height: 100%;margin: 0 auto;}
 .call_us .phone{width: 25%;height: 100%;display: block;float: left;background: url('../img/icon4.png') center center no-repeat;background-size: 1.4rem auto;}
 .call_us .call_txt{float: right;margin-top: 1%;width: 75%;}
-.call_us .call_txt .tel{color: #fff;font-size: 1rem;display: block;}
+.call_us .call_txt .tel{color: #fff;font-size: 1rem;display: block;margin-top: 1%;}
 .call_us .call_txt .net{color: #fff;font-size: 0.75rem;display: block;}
 
 
