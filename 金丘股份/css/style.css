@@ -1,0 +1,42 @@
+html,body,.container{width: 100%;position: relative;background-color: #f0f0f0;}
+
+/*header*/
+.container{height: auto;}
+.header{width: 100%;height: 2.25rem;background-color: #fff;position: fixed;left: 0;top: 0;z-index: 99;}
+.logo{width: 25%;margin: 2% auto auto auto;}
+.header .border{width: 100%;position: absolute;left: 0;bottom: 0;}
+
+/*banner*/
+.banner{width: 100%;height:11.75rem;background-color: #ccc;padding-top: 2.25rem;overflow: hidden;}
+/*.swiper-container,.swiper-wrapper,.swiper-slide{width: 100%;height: 100%;overflow: hidden;}*/
+.swiper-pagination-bullet{background: #fff;}
+.product_h2{text-align: center;color: #3772d0;font-size: 1rem;line-height: 1.5rem;margin-top: 0.75rem;}
+.company{color: #59B538;margin-top: 1rem;}
+.our_kehu{color: #eb5321;margin-top: 1rem;}
+.line{width: 45%;margin: 0 auto;}
+
+/*product_btn*/
+/*.product_btn{width: 100%;padding: 0.5rem;box-sizing:border-box;}
+.product_btn a{width: 48%;height: 5rem;background-color: #fff;border-radius: 4px;display: block;float: left;margin-bottom: 0.5rem;box-shadow: 1px 1px 1px #686868}
+.product_btn a:nth-child(2n){float: right;}*/
+.product_txt{width: 90%;margin: 1rem auto auto auto;position: relative;display: inline-block;}
+.product_txt .icon{width: 1.5rem;display: block;position: absolute;left: 5%;top: 50%;-webkit-transform: translateY(-50%);}
+.product_txt .txt{width: 11.5rem;float: right;position: relative;}
+.product_txt .txt h3{font-size: 0.6rem;font-weight: 700;text-align: left;width: 100%;color: #797979;margin-bottom: 0.25rem;}
+.product_txt .txt p{text-align: left;font-size: 0.5rem;color: #b4b4b5;line-height: 0.8rem;}
+.kehu{width: 95%;margin: 1rem auto auto auto;}
+
+.company_txt{width:80%;margin:0 auto;height:16rem;color: #c7c7c7;margin-top: 0.5rem;text-indent: 2em;font-size: 0.65rem;margin-bottom: 2rem;}
+.company_txt em{color: #59B538;}
+.company_txt p{text-align:justify;text-indent: 2em;font-size: 0.65rem;}
+
+/*call_us*/
+.call_us{width: 100%;height: 2.5rem;background-color: #59b538;padding: 0 3rem 0 2.8rem;box-sizing: border-box;overflow: hidden;}
+.call_us .phone{width: 1.5rem;display: block;margin-top: 5%;float: left;}
+.call_us .call_txt{float: left;margin-left: 0.5rem;margin-top: 2.5%;width: 8rem;}
+.call_us .call_txt .tel{color: #fff;font-size: 1rem;display: block;}
+.call_us .call_txt .net{color: #fff;font-size: 0.75rem;display: block;}
+
+
+.copy_right{width: 100%;margin-top: 1rem;}
+.copy_right p{text-align: center;color: #c7c7c7;font-size: 0.5rem;;}
