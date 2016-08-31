@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>KFC</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+	<link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+<div class="mask loading">
+		<img src="img/light1.png" alt="" class="light1">
+		<img src="img/light2.png" alt="" class="light2">
+		<img src="img/light3.png" alt="" class="light3">
+		<img src="img/light4.png" alt="" class="light4">
+		<img src="img/light5.png" alt="" class="light5">
+	<div class="load_box">
+		
+	</div>
+	<div class="load">
+			<span style="width:0%">
+				<div class="box">
+					<div class="run">
+						
+					</div>
+					<img src="img/shadow.png" alt="" class="shadow">
+				</div>
+				
+			</span>
+		</div>
+</div>
+<!-- mask -->
+<div class="container">
+	<img src="img/tell_title1.png" width="100%">
+	<img src="img/tell_title2.png" width="100%">
+	<img src="img/tell_title3.png" width="100%">
+	<img src="img/tell_title4.png" width="100%">
+	<img src="img/tell_title5.png" width="100%">
+	<img src="img/tell_title6.png" width="100%">
+	<img src="img/tell_title7.png" width="100%">
+	<img src="img/tell_title8.png" width="100%">
+	<img src="img/tell_title9.png" width="100%">
+</div>
+<script src="js/app.js" id="appjs" data-adapt="1" ></script>
+<script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
+<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript">
+
+$(function() {
+	var loaded = 0;
+		if ($('.container img[src]').length === 0 || navigator.userAgent.indexOf('MSIE 9') != -1){
+		}else{
+		   $('.container').imagesLoaded().progress(function(instance,image){
+
+		   	// var num = parseInt(loaded / instance.images.length * 100) + '%';
+
+		       loaded ++ ;
+		       $('.load span').css('width', parseInt(loaded / instance.images.length * 100) + '%');
+		       console.log(parseInt(loaded / instance.images.length * 100) + '%');
+		       
+		       
+		       
+		       
+		       if (parseInt(loaded / instance.images.length * 100) <= 20) {
+		       		$(".light1").show();
+					$(".light2,.light3,.light4,.light5").hide();
+					console.log(222222);
+		       }
+		       else if (parseInt(loaded / instance.images.length * 100) <= 40 || parseInt(loaded / instance.images.length * 100) >20) {
+		       		$(".light2").show();
+					$(".light1,.light3,.light4,.light5").hide();
+					console.log(444444);
+		       }
+		       else if (parseInt(loaded / instance.images.length * 100) <= 60 || parseInt(loaded / instance.images.length * 100) >40) {
+		       		$(".light3").show();
+					$(".light2,.light1,.light4,.light5").hide();
+					console.log(666666);
+		       }
+		       else if (parseInt(loaded / instance.images.length * 100) <= 80 || parseInt(loaded / instance.images.length * 100) >60) {
+		       		$(".light4").show();
+					$(".light2,.light3,.light1,.light5").hide();
+					console.log(8888888);
+		       }
+		       else {
+		       		$(".light5").show();
+					$(".light2,.light3,.light4,.light1").hide();
+					console.log(101010);
+		       }
+		       if (loaded == instance.images.length) {
+		           setTimeout(function () {
+		               // $('.loading').fadeOut();
+		               $(".container").fadeIn();
+		           }, 100);
+		       }
+		   });
+		}
+});
+
+</script>
+</body>
+</html>

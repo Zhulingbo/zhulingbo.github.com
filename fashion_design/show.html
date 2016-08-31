@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>KFC</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+<div class="mask vote_mask">
+	<div class="border">
+		<p>感谢您为我们投出宝贵的一票，<br>
+请确认您已浏览完20位设计师的作品。</p>
+	<div class="btns">
+		<a href="javascript:;" class="btn again">返回重投</a>
+		<a href="javascript:;" class="btn affirm">确认投票</a>
+	</div>
+	</div>
+</div>
+<!-- container -->
+<div class="container show">
+	<!-- swiper -->
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="title">
+					<div class="main">
+						<span class="ranking">01</span>
+						<span class="designer">设计师</span>
+						<span class="name">笔墨纸砚</span>
+						<span class="logo">
+							<img src="img/logo_b.png" width="100%">
+						</span>
+					</div>
+				</div>
+				<img src="img/pro_pic.png" width="95%" class="pic">
+			</div>
+			<div class="swiper-slide">
+				<div class="title">
+					<div class="main">
+						<span class="ranking">02</span>
+						<span class="designer">设计师</span>
+						<span class="name">王一帆</span>
+						<span class="logo">
+							<img src="img/logo_b.png" width="100%">
+						</span>
+					</div>
+				</div>
+				<img src="img/pro_pic2.png" width="95%">
+			</div>
+			<div class="swiper-slide">
+				<div class="title">
+					<div class="main">
+						<span class="ranking">03</span>
+						<span class="designer">设计师</span>
+						<span class="name">王苒</span>
+						<span class="logo">
+							<img src="img/logo_b.png" width="100%">
+						</span>
+					</div>
+				</div>
+				<img src="img/pro_pic3.png" width="95%">
+			</div>
+		</div>
+	</div>
+	<!-- swiper -->
+	<a href="name_list.html" class="btn2 more">
+		更多设计师
+	</a>
+	<a href="javascript:;" class="btn2 vote">
+		<span class="heart"></span>
+		<em>为TA投票</em>
+	</a>
+	<div class="btns_box clearfix">
+		<div class="three_btn">
+			<a href="rule.html">活动规则</a>
+			<a href="list.html">人气榜单</a>
+			<a href="index.html">返回首页</a>
+		</div>
+		<a href="javascript:;" class="open btn_show">
+			<span></span>
+			<span></span>
+			<span></span>
+			<em>展开</em>
+		</a>
+	</div>
+</div>
+<!-- container -->
+<script src="js/app.js" id="appjs" data-adapt="1" ></script>
+<script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
+<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	setInterval(function(){
+  		if ($(".list .camera_box .light1").css('display') != 'none') {
+  			$(".list .camera_box .light1").hide();
+            $(".list .camera_box .light2").show();
+  		}else{
+  			$(".list .camera_box .light1").show();
+            $(".list .camera_box .light2").hide();
+  		}
+  	},1000)
+
+  	$(".open").on('touchstart',function(){
+  		$(".three_btn").stop().slideToggle();
+  		$(this).toggleClass('btn_show');
+  		if ($(this).hasClass('btn_show')) {
+  			$(this).find('em').html("展开");
+  			// $(".open").addClass("btn_show");
+  		}else{
+  			$(this).find('em').html("收起");
+  			// $(".open").removeClass("btn_show");
+  		}
+  	})
+
+  	var mySwiper = new Swiper('.swiper-container', {
+		resistanceRatio : 0,
+		direction : 'vertical'
+	})
+
+	$(".vote").on("click",function(){
+		$(".vote_mask").show();
+	})
+	$(".again").on("click",function(){
+		$(".vote_mask").hide();
+	})
+});
+</script>
+</body>
+</html>

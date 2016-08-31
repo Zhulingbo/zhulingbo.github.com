@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>KFC</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+	<link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+<div class="mask loading">
+	<img src="img/light1.png" class="light0">
+	<img src="img/light1.png" class="light1">
+	<img src="img/light2.png" class="light2">
+	<img src="img/light3.png" class="light3">
+	<img src="img/light4.png" class="light4">
+	<img src="img/light5.png" class="light5">
+	<div class="load_box">
+		<div class="load">
+			<span style="width:0%">
+				<div class="box">
+					<div class="run">
+						
+					</div>
+					<img src="img/shadow.png" class="shadow">
+				</div>
+				
+			</span>
+		</div>
+	</div>
+
+</div>
+<!-- container -->
+<div class="container home">
+	<img data-src="img/logo_b.png" class="logo">
+	<div class="pan">
+		<img data-src="img/home_pan.png" width="100%">
+		<img data-src="img/home_light.png" class="light">
+	</div>
+	<img data-src="img/title.png" class="title">
+	<img data-src="img/home_tit.png" class="title2">
+	<img data-src="img/home_txt.png" class="txt">
+	<div class="btn_box">
+		<a href="list.html" class="btn list_btn">
+			人气榜单
+		</a>
+		<a href="javascript:;" class="btn vote_btn">
+			立即投票
+		</a>
+	</div>
+	<a href="rule.html" class="btn rule_btn">
+		活动规则
+	</a>
+</div>
+<!-- container -->
+<script src="js/app.js" id="appjs" data-adapt="1" ></script>
+<script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
+<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript">
+
+// $(function() {
+	var loaded = 0;
+		if ($('.home img[data-src]').length === 0 || navigator.userAgent.indexOf('MSIE 9') != -1){
+		}else{
+		   $('.home').imagesLoaded().progress(function(instance,image){
+
+		   	// var num = parseInt(loaded / instance.images.length * 100);
+		   		// alert(instance.images.length)
+		       loaded ++ ;
+		       $('.load span').css('width', parseInt(loaded / instance.images.length * 100) + '%');
+		       console.log(parseInt(loaded / instance.images.length * 100) + '%');
+		       if (parseInt(loaded / instance.images.length * 100) === 16 || parseInt(loaded / instance.images.length * 100) ===33) {
+		       		$(".light1").show();
+					$(".light2,.light3,.light4,.light5").hide();
+		       }
+		       if (parseInt(loaded / instance.images.length * 100) === 50) {
+		       		$(".light2").show();
+					$(".light1,.light3,.light4,.light5").hide();
+		       }
+		       if (parseInt(loaded / instance.images.length * 100) === 66) {
+		       		$(".light3").show();
+					$(".light2,.light1,.light4,.light5").hide();
+		       }
+		       if (parseInt(loaded / instance.images.length * 100) === 83) {
+		       		$(".light4").show();
+					$(".light2,.light3,.light1,.light5").hide();
+		       }
+		       if(parseInt(loaded / instance.images.length * 100) === 100){
+		       		$(".light5").show();
+					$(".light2,.light3,.light4,.light1").hide();
+					
+		       }
+		       if (loaded == instance.images.length) {
+		           setTimeout(function () {
+		               $('.loading').fadeOut();
+		               $(".home").fadeIn();
+		           }, 100);
+		       }
+		   });
+		}
+	$('.container').find('img').each(function(){
+		$(this).attr("src",$(this).data("src"))
+	})
+// });
+
+</script>
+</body>
+</html>

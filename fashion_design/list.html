@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>KFC</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+	<link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+<!-- container -->
+<div class="container list">
+	<img src="img/list_tit.png" alt="" class="title">
+	<img src="img/list_pizz.png" alt="" class="pizz">
+	<div class="main">
+		<img src="img/list_main_tit.png" width="100%">
+		<div class="content">
+			<ul>
+				<li>
+					<span class="ranking">TOP1</span>
+					<span class="designer">啊啊啊</span>
+					<span class="number">1234</span>
+				</li>
+				<li>
+					<span class="ranking">TOP2</span>
+					<span class="designer">啊啊啊</span>
+					<span class="number">1234</span>
+				</li>
+				<li>
+					<span class="ranking">TOP3</span>
+					<span class="designer">啊啊啊</span>
+					<span class="number">1234</span>
+				</li>
+				<li>
+					<span class="ranking">TOP4</span>
+					<span class="designer">啊啊啊</span>
+					<span class="number">1234</span>
+				</li>
+				<li>
+					<span class="ranking">TOP5</span>
+					<span class="designer">啊啊啊</span>
+					<span class="number">1234</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="camera_box">
+		<img src="img/camera.png" class="camera">
+		<img src="img/camera_light1.png" class="light1">
+		<img src="img/camera_light2.png" class="light2">
+		<img src="img/bo.png" class="bo">
+	</div>
+	<a href="javascript:;" class="btn vote_btn">立即投票</a>
+</div>
+<!-- container -->
+<script src="js/app.js" id="appjs" data-adapt="1" ></script>
+<script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
+<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	setInterval(function(){
+  		if ($(".list .camera_box .light1").css('display') != 'none') {
+  			$(".list .camera_box .light1").hide();
+            $(".list .camera_box .light2").show();
+  		}else{
+  			$(".list .camera_box .light1").show();
+            $(".list .camera_box .light2").hide();
+  		}
+  	},1000)
+});
+</script>
+</body>
+</html>
