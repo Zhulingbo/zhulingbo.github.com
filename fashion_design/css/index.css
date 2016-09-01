@@ -102,11 +102,11 @@ html,body,.container{width: 100%;height: 100%;overflow: hidden;position: relativ
 .finish .hint{width: 100%;color: #3a4a8a;padding-left: 1.25rem;margin-top: 2.1rem;}
 form{width: 100%;padding: 0 0.5rem;box-sizing:border-box;}
 .finish .name,.finish .tel,.finish .address{width: 100%;height: 1rem;margin-top: 0.4rem;}
-.finish .name span{width: 25%;height: 1rem;display: block;float: left;line-height: 1rem;padding-left:0.6rem;box-sizing:border-box;letter-spacing: 0.34rem;}
+.finish .name span{width: 25%;height: 1rem;display: block;float: left;background: url('../img/name_bg.png') no-repeat;background-size: 100%}
 .finish .name input{width: 40%;height: 1rem;float: left;background: 0;display: block;border: 0;background: url('../img/input_bg.png') no-repeat;background-size: 100% 100%;border-radius: 0;}
-.finish .tel span{width: 25%;height: 1rem;display: block;float: left;line-height: 1rem;padding-left:0.6rem;box-sizing:border-box;letter-spacing: 0.1rem}
+.finish .tel span{width: 25%;height: 1rem;display: block;float: left;background: url('../img/name_bg.png') no-repeat;background-size: 100%}
 .finish .tel input{width: 40%;height: 1rem;float: left;background: 0;display: block;border: 0;background: url('../img/input_bg.png') no-repeat;background-size: 100% 100%;border-radius: 0;}
-.finish .address span{width: 25%;height: 1rem;display: block;float: left;line-height: 1rem;padding-left:0.6rem;box-sizing:border-box;letter-spacing: 0.1rem}
+.finish .address span{width: 25%;height: 1rem;display: block;float: left;background: url('../img/name_bg.png') no-repeat;background-size: 100%}
 .finish .address textarea{width: 73%;height: 2rem;float: left;background: 0;display: block;border: 0;background: url('../img/input_bg.png') repeat;background-size: 1px 1rem;border-radius: 0;line-height: 1rem;font-size: 0.7rem;}
 .finish .rule_txt{width: 100%;padding-left: 1rem;font-size: 0.45rem;color: #fff;margin-top: 2.4rem;box-sizing:border-box;}
 .finish .list_btn{width: 5.25rem;height: 2.2rem;display: block;position: absolute;left: 1.25rem;bottom: 0.8rem;text-align: center;line-height: 1.8rem;font-size: 1rem;font-weight: 700;color: #000;z-index: 30;}
