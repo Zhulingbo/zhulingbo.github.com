@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="cleartype" content="on">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no"/>
+<script src="js/jquery.min.js?rev=@@hash" type="text/javascript"></script>
+<script src="js/app.min.js?rev=@@hash" id="appjs" data-adapt="1"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css?rev=@@hash">
+</head>
+
+
+<body>
+    <div class="container integral">
+        <div class="integral_box">
+            <p class="clearfix">
+                <em>可用积分</em>
+                <span class="use_integral">3000</span>
+            </p>
+            <p class="clearfix">
+                <em>抵扣积分</em>
+                <input type="number" value="" class="can_use">
+            </p>
+            <p class="clearfix">
+                <em>抵扣金额</em>
+                <span>
+                    &yen;<label class="integral_money"></label>
+                </span>
+            </p>
+        </div>
+        <a href="javascript:;" class="btn btn_confirm">确认抵扣</a>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            /*抵扣金额*/
+            var all_inte = parseInt($('.use_integral').html());
+            console.log(all_inte);
+            $('.can_use').on('blur',function(){
+                var can_val = parseInt($('.can_use').val());
+                console.log(can_val);
+                var integral_money = $('.integral_money');
+                if(can_val> all_inte){
+                    integral_money.html('');
+                    alert('您的输入的“抵扣积分”不能大于您的“可用积分”');
+                    return false;
+                }
+                if (can_val < 0) {
+                    alert('您输入的值为负值，你确认后重新输入！');
+                    return false;
+                }
+                integral_money.html(parseFloat(can_val / 100));
+            });
+        })
+    </script>
+</body>
+</html>

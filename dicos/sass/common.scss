@@ -1,0 +1,162 @@
+body, form, fieldset, legend, label, input, h1, h2, h3, p, dl, ul, ol, li, div, span, strong, em, a, var, i, dl, dt, dd, footer, header, nav, section, article {
+  margin: 0;
+  padding: 0;
+  font-size: 0.6rem;
+  font-family: "Microsoft Yahei,arial";
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  }
+
+:focus {outline:0;}
+ol, ul { list-style-type: none; }
+a { text-decoration: none; -webkit-tap-highlight-color: transparent; }
+a:hover { text-decoration: none; }
+img { border: 0; vertical-align: middle; -ms-interpolation-mode: bicubic; display: block; }
+em, var, i { font-style: normal; }
+.clear-both { clear: both; height: 0; overflow: hidden }
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+
+/*iconfont*/
+@font-face {
+  font-family: "iconfont";
+  src: url('../iconfont/iconfont.eot?t=1472027907'); /* IE9*/
+  src: url('../iconfont/iconfont.eot?t=1472027907#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../iconfont/iconfont.woff?t=1472027907') format('woff'), /* chrome, firefox */ url('../iconfont/iconfont.ttf?t=1472027907') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../iconfont/iconfont.svg?t=1472027907#iconfont') format('svg'); /* iOS 4.1- */
+  }
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  }
+.icon-chicken:before { content: "\e600"; }
+.icon-cola:before { content: "\e601"; }
+.icon-hamburger:before { content: "\e602"; }
+.icon-logo:before { content: "\e603"; }
+.icon-start:before { content: "\e604"; }
+.icon-delete:before { content: "\e605"; }
+.icon-list:before { content: "\e606"; }
+.icon-reduce:before { content: "\e607"; }
+.icon-rice:before { content: "\e608"; }
+.icon-success:before { content: "\e609"; }
+.icon-fail:before { content: "\e60a"; }
+.icon-time:before { content: "\e60b"; }
+.icon-shoppingcar:before { content: "\e60c"; }
+.icon-add:before { content: "\e60d"; }
+.icon-select:before { content: "\e60e"; }
+.icon-arrowsright:before { content: "\e60f"; }
+.icon-gruel:before { content: "\e610"; }
+.icon-icecream:before { content: "\e611"; }
+.icon-vegetables:before { content: "\e612"; }
+
+/*common_scss*/
+@function num($num) {
+  @return ($num/40) + rem;
+  }
+
+@mixin webkit($key, $num) {
+  #{$key}: #{$num};
+  -webkit-#{$key}: #{$num};
+  }
+
+@mixin box_sizing {
+  @include webkit(box-sizing, border-box);
+  }
+
+@mixin center{
+  @include webkit(transform, translate3d(-50%, -50%, 0));
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  }
+/*common_style*/
+html,body,.container{
+  width:100%;
+ height: 100%;
+  position: relative;
+  }
+body p,body p span, body p a,body p span, body a, body em,body li,body li span{
+  font-family: microsoft yahei, Arial;
+  }
+.logo,.menus{
+  background: -webkit-linear-gradient(#81c12f 50%, #fff); color: #fff;
+  }
+.paid_success,.unlock,.my_order,.order_details{
+  background:#ebebeb;
+  }
+.my_order,.order_details,.order_confirm{
+  overflow:scroll;
+  -webkit-overflow-scrolling:touch;
+  }
+/*按钮*/
+.btn{
+  display: block;
+  width: 87.5%;
+  margin: 0 auto;
+  padding: num(22) 0;
+  text-align: center;
+  color: #fff;
+  background: #74bd31;
+  font-family: microsoft yahei, Arial;
+  }
+.container .btn_order{
+  float:right;
+  text-align: center;
+  font-size:num(26);
+  width:num(128);
+  height:num(50);
+  line-height: num(50);
+  color:#fff;
+  }
+
+/*footer*/
+.footer{
+  width:100%;
+  height: num(85);
+  line-height:num(85);
+  background: #b2dc8c;
+  position: fixed;
+  left:0;
+  bottom:0;
+  z-index:100;
+  .ftr_btn{
+    font-family: microsoft yahei, Arial;
+    float:right;
+    color:#fff;
+    background: #74bd31;
+    text-align: center;
+    width:num(165);
+    display: block;
+    }
+  }
+/*mask*/
+.mask_bg{
+  width:100%;
+  height: 100%;
+  position: fixed;
+  left:0;
+  top:0;
+  z-index:98;
+  background: rgba(0,0,0,0.25);
+  display: none;
+  }
+.mask_main{
+  width:100%;
+  background: #fff;
+  position:fixed;
+  left:0;
+  bottom:0;
+//  bottom:num(85);
+  padding-bottom:num(100);
+  -webkit-transition: 0.7s;
+  -webkit-transform: translate3d(0,100%, 0);
+  z-index:99;
+  }

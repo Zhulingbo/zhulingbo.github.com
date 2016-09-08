@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="cleartype" content="on">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no"/>
+<script src="js/jquery.min.js?rev=@@hash" type="text/javascript"></script>
+<script src="js/app.min.js?rev=@@hash" id="appjs" data-adapt="1"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css?rev=@@hash">
+</head>
+
+
+<body>
+    <div class="container order_remark">
+        <div class="remark_box">
+            <p class="remark_tit">订单备注</p>
+            <div class="text_box">
+                <textarea placeholder="请输入您的留言..." onkeyup="checkLength(this);"></textarea>
+                <p class="word_num"><span class="all_num">0</span>/50</p>
+            </div>
+            <a href="javascript:;" class="btn">提交备注</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function checkLength(which) {
+            var maxChars = 50; //最大限制数字
+            if (which.value.length > maxChars) {
+                // 超过限制的字数了就将 文本框中的内容按规定的字数 截取
+                which.value = which.value.substring(0, maxChars);
+                return false;
+            } else {
+                var curr = which.value.length;
+                $('.all_num').html(curr.toString());
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

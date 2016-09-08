@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="cleartype" content="on">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no"/>
+<script src="js/jquery.min.js?rev=@@hash" type="text/javascript"></script>
+<script src="js/app.min.js?rev=@@hash" id="appjs" data-adapt="1"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css?rev=@@hash">
+</head>
+
+
+<body>
+    <div class="mask_bg"></div>
+    <div class="mask_main mask_time">
+        <p class="title clearfix">
+            <em>取餐时间</em>
+            <a href="javascript:;" class="sure">确定</a>
+        </p>
+        <div class="select_time">
+
+        </div>
+        <p class="last_time">最晚可下单时间 21:40</p>
+        <a href="javascript:;" class="btn take_time">预约取餐</a>
+        <a href="javascript:;" class="btn take_imm">立即取餐</a>
+    </div>
+    <div class="container order_confirm">
+        <div class="top_confirm">
+            <div class="top_color">
+                <div class="confirm">
+                    <div class="confirm_list">
+                        <div class="shop_box">
+                            <p class="shop_name">未来概念店</p>
+                            <p class="shop_address">闵行区吴中路1686号W广场B栋</p>
+                        </div>
+                        <ul class="pro_list">
+                            <li class="clearfix">
+                                <div class="pro_name_box clearfix">
+                                    <span class="pro_img">
+                                        <img src="img/product.jpg">
+                                    </span>
+                                    <span class="pro_name">土豆沙拉</span>
+                                </div>
+                                <div class="price_box clearfix">
+                                    <span class="num">x1</span>
+                                    <span class="price">&yen;<em>30</em></span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="pro_name_box clearfix">
+                                    <span class="pro_img">
+                                        <img src="img/product.jpg">
+                                    </span>
+                                    <span class="pro_name">土豆沙拉</span>
+                                </div>
+                                <div class="price_box clearfix">
+                                    <span class="num">x1</span>
+                                    <span class="price">&yen;<em>30</em></span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="pro_name_box clearfix">
+                                    <span class="pro_img">
+                                        <img src="img/product.jpg">
+                                    </span>
+                                    <span class="pro_name">土豆沙拉</span>
+                                </div>
+                                <div class="price_box clearfix">
+                                    <span class="num">x1</span>
+                                    <span class="price">&yen;<em>30</em></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="all clearfix">
+                    <span class="all_num">总计</span>
+                    <span class="all_money">&yen;&nbsp;<em>90.36</em></span>
+                </p>
+                <ul class="confirm_remark confirm_style">
+                    <li class="clearfix">
+                        <span class="remark_title">支付方式</span>
+                        <p class="pay">
+                            <em class="iconfont icon-select"></em>微信支付
+                        </p>
+                    </li>
+                    <li class="clearfix">
+                        <span class="remark_title">订单备注</span>
+                        <a href="order_remark.html" class="icon_box favorite_btn clearfix">
+                            <span class="remark_detail">口味 偏好等口味</span><em class="iconfont icon-arrowsright"></em>
+                        </a>
+                    </li>
+                    <li class="clearfix">
+                        <span class="remark_title">发票抬头</span>
+                        <a href="order_invoice.html" class="icon_box invoice_btn clearfix">
+                            <span class="remark_detail">不需要发票</span><em class="iconfont icon-arrowsright"></em>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="confirm_remark confirm_fun">
+            <li class="clearfix">
+                <span class="remark_title">取餐时间</span>
+                <a href="javascript:;" class="icon_box con_time_btn clearfix">
+                    <span class="remark_detail">立即</span><em class="iconfont icon-time time_icon"></em>
+                </a>
+            </li>
+            <li class="clearfix">
+                <span class="remark_title">打包外带</span>
+                <div class="item-toggle">
+                    <label class="toggle">
+                        <input type="checkbox" id="ckAddress">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </div>
+            </li>
+            <li class="clearfix">
+                <span class="remark_title">可用积分<em>3000</em></span>
+                <a href="integral.html" class="icon_box invoice_btn clearfix">
+                    <span class="remark_detail">可抵扣</span><em class="iconfont icon-arrowsright"></em>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer con_pay clearfix">
+        <p>
+            <em>共</em>&yen;<span class="ftr_price">90</span>
+        </p>
+        <a href="order_details.html" class="ftr_btn">去支付</a>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            /*选取时间弹层*/
+            $('.con_time_btn').on('touchstart',function(){
+                $('.mask_bg').fadeIn('fast');
+                $(".mask_time").css({
+                    'transform': 'translate3d(0,0,0)',
+                    '-webkit-transform': '-webkit-translate3d(0,0,0)'
+                });
+                $('.mask_time').bind('touchmove', function (e) {
+                    e.stopPropagation();
+                    return false;
+                });
+            });
+            /*时间选择添加样式*/
+            $('.btn').on('click',function(){
+                $(this).addClass('take_time').siblings().removeClass('take_time');
+            });
+            /*close*/
+            $('.sure,.mask_bg').on('touchstart',function(){
+                $('.mask_time').css({
+                    'transform':'translate3d(0,100%,0)',
+                    '-webkit-transform':'-webkit-translate3d(0,100%,0)'
+                });
+                $('.mask_bg').fadeOut('fast');
+            });
+        });
+
+    </script>
+</body>
+</html>

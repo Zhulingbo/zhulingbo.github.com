@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="cleartype" content="on">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no"/>
+<script src="js/jquery.min.js?rev=@@hash" type="text/javascript"></script>
+<script src="js/app.min.js?rev=@@hash" id="appjs" data-adapt="1"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css?rev=@@hash">
+</head>
+
+
+<body>
+    <div class="container order_invoice">
+        <div class="company_name">
+            <form>
+                <ul>
+                    <li>
+                        <span class="clearfix active">
+                            <input type="radio" name="invoice" id="not_invoice" class="radio">
+                            <label for="not_invoice">不需要发票</label>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="clearfix">
+                            <input type="radio" name="invoice" id="company1" class="radio">
+                            <label for="company1">上海亚非网络有限公司</label>
+                        </span>
+                        <em class="iconfont icon-delete company_del"></em>
+                    </li>
+                    <li>
+                        <span class="clearfix">
+                            <input type="radio" name="invoice" id="company2" class="radio">
+                            <label for="company2">上海费芮网络有限公司芮网络有限公司芮网络有限公司芮网络有限公司</label>
+                        </span>
+                        <em class="iconfont icon-delete company_del"></em>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <div class="company_box">
+            <textarea placeholder="请输入发票抬头，最多50字" id="company_name" onkeyup="checkLength(this);"></textarea>
+        </div>
+        <a href="javascript:;" class="btn add"><span class="iconfont icon-add"></span>添加抬头</a>
+    </div>
+    <script type="text/javascript">
+        function checkLength(which) {
+            var maxChars = 50; //最大限制数字
+            if (which.value.length > maxChars) {
+                // 超过限制的字数了就将 文本框中的内容按规定的字数 截取
+                which.value = which.value.substring(0, maxChars);
+                return false;
+            } else {
+                var curr = which.value.length;
+                $('.all_num').html(curr.toString());
+                return true;
+            }
+        }
+        $(function () {
+            $('li').click(function () {
+                $("input[type='radio']").removeAttr('checked');
+                $("li span").removeClass('active');
+                $(this).find(".radio").attr('checked', 'checked');
+                $(this).find('span').addClass('active');
+            });
+            /*添加抬头*/
+            $('.add').on('click',function(){
+                var name = $('#company_name').val();
+                var name_length = name.length;
+                if(name_length<1){
+                    return false;
+                }else{
+                    var company = '<li><span class="clearfix"><input><label> ' + name + ' </label></span><em class="iconfont icon-delete company_del"></em></li>';
+                    $('.company_name ul').append(company);
+                    /*删除新增的公司抬头*/
+                    $('.company_del').on('click', function () {
+                        $(this).parents('li').remove();
+                    });
+                    /*公司抬头数量*/
+                    var com_num = $('.company_name li').length;
+                    if(com_num >10){
+                        alert('您添加的公司过多，请确认后输入');
+                        return false;
+                    }
+                    console.log(com_num);
+                }
+            });
+            /*删除公司抬头*/
+            $('.company_del').on('click',function(){
+                $(this).parents('li').remove();
+            });
+        });
+
+    </script>
+</body>
+</html>

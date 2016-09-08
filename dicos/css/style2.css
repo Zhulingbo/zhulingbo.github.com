@@ -1,0 +1,646 @@
+@charset "UTF-8";
+/*引用scss文件*/
+body, form, fieldset, legend, label, input, h1, h2, h3, p, dl, ul, ol, li, div, span, strong, em, a, var, i, dl, dt, dd, footer, header, nav, section, article {
+  margin: 0;
+  padding: 0;
+  font-size: 0.6rem;
+  font-family: "Microsoft Yahei,arial";
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none; }
+
+:focus {
+  outline: 0; }
+
+ol, ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent; }
+
+a:hover {
+  text-decoration: none; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+  display: block; }
+
+em, var, i {
+  font-style: normal; }
+
+.clear-both {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/*iconfont*/
+@font-face {
+  font-family: "iconfont";
+  src: url("../iconfont/iconfont.eot?t=1472027907");
+  /* IE9*/
+  src: url("../iconfont/iconfont.eot?t=1472027907#iefix") format("embedded-opentype"), url("../iconfont/iconfont.woff?t=1472027907") format("woff"), url("../iconfont/iconfont.ttf?t=1472027907") format("truetype"), url("../iconfont/iconfont.svg?t=1472027907#iconfont") format("svg");
+  /* iOS 4.1- */ }
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-chicken:before {
+  content: "\e600"; }
+
+.icon-cola:before {
+  content: "\e601"; }
+
+.icon-hamburger:before {
+  content: "\e602"; }
+
+.icon-logo:before {
+  content: "\e603"; }
+
+.icon-start:before {
+  content: "\e604"; }
+
+.icon-delete:before {
+  content: "\e605"; }
+
+.icon-list:before {
+  content: "\e606"; }
+
+.icon-reduce:before {
+  content: "\e607"; }
+
+.icon-rice:before {
+  content: "\e608"; }
+
+.icon-success:before {
+  content: "\e609"; }
+
+.icon-fail:before {
+  content: "\e60a"; }
+
+.icon-time:before {
+  content: "\e60b"; }
+
+.icon-shoppingcar:before {
+  content: "\e60c"; }
+
+.icon-add:before {
+  content: "\e60d"; }
+
+.icon-select:before {
+  content: "\e60e"; }
+
+.icon-arrowsright:before {
+  content: "\e60f"; }
+
+.icon-gruel:before {
+  content: "\e610"; }
+
+.icon-icecream:before {
+  content: "\e611"; }
+
+.icon-vegetables:before {
+  content: "\e612"; }
+
+/*common_scss*/
+/*common_style*/
+html, body, .container {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+body p, body p span, body p a, body p span, body a, body em, body li, body li span {
+  font-family: microsoft yahei, Arial; }
+
+.logo, .menus {
+  background: -webkit-linear-gradient(#81c12f 50%, #fff);
+  color: #fff; }
+
+.paid_success, .unlock, .my_order, .order_details {
+  background: #ebebeb; }
+
+.my_order, .order_details, .order_confirm {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch; }
+
+/*按钮*/
+.btn {
+  display: block;
+  width: 87.5%;
+  margin: 0 auto;
+  padding: 0.55rem 0;
+  text-align: center;
+  color: #fff;
+  background: #74bd31;
+  font-family: microsoft yahei, Arial; }
+
+.container .btn_order {
+  float: right;
+  text-align: center;
+  font-size: 0.65rem;
+  width: 3.2rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  color: #fff; }
+
+/*footer*/
+.footer {
+  width: 100%;
+  height: 2.125rem;
+  line-height: 2.125rem;
+  background: #b2dc8c;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100; }
+  .footer .ftr_btn {
+    font-family: microsoft yahei, Arial;
+    float: right;
+    color: #fff;
+    background: #74bd31;
+    text-align: center;
+    width: 4.125rem;
+    display: block; }
+
+/*mask*/
+.mask_bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 98;
+  background: rgba(0, 0, 0, 0.25);
+  display: none; }
+
+.mask_main {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 2.5rem;
+  -webkit-transition: 0.7s;
+  -webkit-transform: translate3d(0, 100%, 0);
+  z-index: 99; }
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  opacity: .4;
+  -webkit-transiton: opacity 0.35s ease;
+  z-index: 10;
+  display: none;
+  overflow: hidden; }
+
+.cart_main {
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  bottom: 2.15rem;
+  z-index: 10;
+  background-color: #fff;
+  -webkit-transition: all 0.35s ease;
+  -webkit-transform: translate3d(0, 100%, 0); }
+  .cart_main .cart_head {
+    width: 100%;
+    height: 1.2rem;
+    background-color: #74bd31;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between; }
+    .cart_main .cart_head .txt {
+      display: block;
+      line-height: 1.2rem;
+      color: #fff; }
+    .cart_main .cart_head .remove {
+      width: 2rem;
+      height: 100%;
+      line-height: 1.2rem; }
+      .cart_main .cart_head .remove span {
+        width: 0.55rem;
+        height: 100%;
+        display: block;
+        float: left;
+        line-height: 1.2rem;
+        color: #fff; }
+      .cart_main .cart_head .remove em {
+        float: right;
+        line-height: 1.2rem;
+        display: block;
+        color: #fff; }
+  .cart_main .cart_list {
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 8rem; }
+    .cart_main .cart_list .entity_row {
+      width: 100%;
+      height: 2.25rem;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-between;
+      padding: 0 1.35rem;
+      box-sizing: border-box;
+      background-color: #fff; }
+      .cart_main .cart_list .entity_row .entity_name {
+        width: 5rem;
+        display: block;
+        line-height: normal;
+        color: #58595b; }
+        .cart_main .cart_list .entity_row .entity_name em {
+          line-height: 2.25rem;
+          max-width: 100%; }
+      .cart_main .cart_list .entity_row .entity_price {
+        width: 2.5rem;
+        display: block;
+        line-height: normal;
+        color: #58595b; }
+        .cart_main .cart_list .entity_row .entity_price em {
+          line-height: 2.25rem;
+          max-width: 100%; }
+      .cart_main .cart_list .entity_row .choose_button {
+        width: 4rem;
+        height: 100%;
+        display: block; }
+        .cart_main .cart_list .entity_row .choose_button .minus {
+          width: 33.3%;
+          height: 2.25rem;
+          display: inline-block;
+          float: left;
+          line-height: 2.25rem;
+          color: #74bd31;
+          text-align: center;
+          font-size: 0.8rem; }
+        .cart_main .cart_list .entity_row .choose_button .plus {
+          width: 33.3%;
+          height: 2.25rem;
+          display: inline-block;
+          float: right;
+          line-height: 2.25rem;
+          color: #74bd31;
+          text-align: center;
+          font-size: 0.8rem; }
+        .cart_main .cart_list .entity_row .choose_button .num {
+          width: 33.3%;
+          height: 2.25rem;
+          display: inline-block;
+          float: left;
+          line-height: 2.25rem;
+          color: #74bd31;
+          text-align: center;
+          font-size: 0.8rem; }
+
+/*order*/
+.order {
+  background-color: #dfdfdf;
+  overflow: hidden; }
+  .order .main {
+    width: 100%;
+    height: 77%;
+    padding: 0 0.575rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between; }
+    .order .main .icon_list {
+      width: 2rem;
+      height: 100%;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-right: 0.3rem; }
+      .order .main .icon_list li {
+        width: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        font-size: 1.25rem;
+        color: #fff;
+        text-align: center;
+        margin: 0.4rem 0; }
+      .order .main .icon_list .icon-cola {
+        font-size: 1.5rem; }
+      .order .main .icon_list .icon-icecream {
+        font-size: 1.5rem; }
+    .order .main .foods {
+      width: 12.15rem;
+      height: 100%;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch; }
+      .order .main .foods .food_name {
+        color: #989898;
+        background-color: #ebebeb;
+        width: 100%;
+        height: 0.95rem;
+        line-height: 0.95rem;
+        padding-left: 0.5rem;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        font-size: 0.55rem;
+        display: block; }
+      .order .main .foods dd {
+        margin-bottom: 0.15rem; }
+        .order .main .foods dd .food {
+          width: 100%;
+          height: 4.125rem;
+          background-color: #fff;
+          border-radius: 0.3rem;
+          box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          padding: 0.625rem; }
+          .order .main .foods dd .food .pic {
+            width: 4.5rem;
+            float: left; }
+          .order .main .foods dd .food .food_detail {
+            width: 6rem;
+            height: 100%;
+            float: right;
+            position: relative; }
+            .order .main .foods dd .food .food_detail .detail {
+              width: 100%;
+              height: 0.95rem;
+              line-height: 0.95rem;
+              display: inline-block;
+              color: #81c12e; }
+            .order .main .foods dd .food .food_detail .price {
+              width: 3.5rem;
+              height: 0.875rem;
+              display: block;
+              position: absolute;
+              left: 0;
+              bottom: 0; }
+              .order .main .foods dd .food .food_detail .price .right {
+                color: #717071;
+                font-size: 0.75rem;
+                line-height: 0.875rem;
+                font-weight: 700; }
+              .order .main .foods dd .food .food_detail .price .wrong {
+                color: #b5b5b5;
+                font-size: 0.625rem;
+                text-decoration: line-through; }
+            .order .main .foods dd .food .food_detail .choose_button {
+              width: 2.5rem;
+              height: 0.8rem;
+              position: absolute;
+              right: 0;
+              bottom: 0; }
+              .order .main .foods dd .food .food_detail .choose_button .minus {
+                width: 0.8rem;
+                height: 0.8rem;
+                display: inline-block;
+                float: left;
+                line-height: 0.8rem;
+                color: #74bd31;
+                text-align: center;
+                font-size: 0.8rem; }
+              .order .main .foods dd .food .food_detail .choose_button .plus {
+                width: 0.8rem;
+                height: 0.8rem;
+                display: inline-block;
+                float: right;
+                line-height: 0.8rem;
+                color: #74bd31;
+                text-align: center;
+                font-size: 0.8rem; }
+              .order .main .foods dd .food .food_detail .choose_button .num {
+                width: 0.85rem;
+                height: 0.8rem;
+                display: inline-block;
+                float: left;
+                line-height: 0.8rem;
+                color: #74bd31;
+                text-align: center;
+                font-size: 0.8rem; }
+      .order .main .foods dd:nth-of-type(1) .food {
+        border-radius: 0 0 0.3rem 0.3rem; }
+
+.dicos_footer {
+  width: 100%;
+  height: 2.15rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #b2dc8c;
+  z-index: 10; }
+  .dicos_footer .shopping_car {
+    width: 3.25rem;
+    height: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+    line-height: 2.15rem;
+    color: #fff;
+    font-size: 1.45rem;
+    position: relative; }
+    .dicos_footer .shopping_car .foods_num {
+      width: 1.15rem;
+      height: 1.15rem;
+      display: block;
+      text-align: center;
+      line-height: 1.15rem;
+      background-color: #74bd31;
+      position: absolute;
+      right: 0.3rem;
+      top: -0.15rem;
+      border-radius: 50%; }
+  .dicos_footer .ok {
+    width: 4rem;
+    height: 100%;
+    display: block;
+    text-align: center;
+    line-height: 2.15rem;
+    color: #fff;
+    background-color: #74bd31;
+    float: right; }
+  .dicos_footer .price {
+    height: 100%;
+    line-height: 2.15rem;
+    color: #595959;
+    float: right;
+    display: block;
+    margin-right: 1.25rem;
+    font-weight: 700;
+    font-size: 0.75rem; }
+    .dicos_footer .price em {
+      font-size: 0.75rem;
+      font-weight: 700; }
+
+.my_indent {
+  width: 100%;
+  height: 3.5rem;
+  background-color: #fff;
+  padding: 1.2rem 1.05rem 0 0.95rem;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+  .my_indent .shop_detail {
+    width: 11.5rem;
+    height: 2rem;
+    float: left; }
+    .my_indent .shop_detail .name {
+      width: 100%;
+      height: 1.25rem;
+      line-height: 1.25rem;
+      color: #58595b;
+      font-size: 0.875rem;
+      display: inline-block; }
+    .my_indent .shop_detail .address {
+      width: 100%;
+      height: 0.7rem;
+      line-height: 0.7rem;
+      color: #b3b3b3;
+      font-size: 0.55rem;
+      display: inline-block; }
+  .my_indent .indent_btn {
+    width: 2.125rem;
+    height: 100%;
+    display: block;
+    float: right;
+    font-size: 0.45rem;
+    color: #74bd31;
+    text-align: center; }
+    .my_indent .indent_btn span {
+      width: 100%;
+      height: 1.3rem;
+      display: block;
+      font-size: 1.3rem;
+      text-align: center;
+      color: #74bd31;
+      margin-bottom: 0.125rem; }
+
+.dishes {
+  width: 100%;
+  min-height: 7.5rem; }
+  .dishes .main {
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 3rem;
+    box-sizing: border-box; }
+    .dishes .main .dishes_pic {
+      width: 100%;
+      height: 10rem;
+      overflow: hidden;
+      margin-top: 0.4rem; }
+    .dishes .main .dishes_txt {
+      width: 100%;
+      padding: 0 1.05rem;
+      box-sizing: border-box;
+      margin-top: 0.85rem; }
+      .dishes .main .dishes_txt .dishes_tit {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        height: 1rem; }
+        .dishes .main .dishes_txt .dishes_tit .name {
+          width: 10rem;
+          height: 1.5rem;
+          display: inline-block;
+          float: left;
+          color: #81c12e;
+          font-size: 0.75rem;
+          line-height: 1rem;
+          font-weight: 700; }
+        .dishes .main .dishes_txt .dishes_tit .choose_button {
+          width: 3.5rem;
+          display: block;
+          line-height: normal; }
+          .dishes .main .dishes_txt .dishes_tit .choose_button .minus {
+            width: 1rem;
+            height: 1rem;
+            display: inline-block;
+            float: left;
+            line-height: 1rem;
+            color: #74bd31;
+            text-align: center;
+            font-size: 0.8rem; }
+          .dishes .main .dishes_txt .dishes_tit .choose_button .plus {
+            width: 1rem;
+            height: 1rem;
+            display: inline-block;
+            float: right;
+            line-height: 1rem;
+            color: #74bd31;
+            text-align: center;
+            font-size: 0.8rem; }
+          .dishes .main .dishes_txt .dishes_tit .choose_button .num {
+            width: 1.5rem;
+            height: 1rem;
+            display: inline-block;
+            float: left;
+            line-height: 1rem;
+            color: #74bd31;
+            text-align: center;
+            font-size: 0.8rem; }
+      .dishes .main .dishes_txt .dishes_price {
+        width: 100%;
+        height: 2rem;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        margin-top: 0.4rem; }
+        .dishes .main .dishes_txt .dishes_price .price {
+          width: 9.5rem;
+          height: 100%; }
+          .dishes .main .dishes_txt .dishes_price .price .sell {
+            width: 100%;
+            display: inline-block;
+            font-size: 0.55rem;
+            color: #bcbec0; }
+            .dishes .main .dishes_txt .dishes_price .price .sell em {
+              text-decoration: line-through; }
+          .dishes .main .dishes_txt .dishes_price .price .vip_sell {
+            width: 100%;
+            display: inline-block;
+            font-size: 0.55rem;
+            color: #bcbec0;
+            margin-top: 0.25rem; }
+            .dishes .main .dishes_txt .dishes_price .price .vip_sell b {
+              font-size: 0.75rem;
+              color: #636363; }
+              .dishes .main .dishes_txt .dishes_price .price .vip_sell b em {
+                font-size: 0.75rem; }
+        .dishes .main .dishes_txt .dishes_price .all_list {
+          width: 3.25rem;
+          height: 1.5rem;
+          background-color: #81c12e;
+          display: block;
+          line-height: 1.5rem;
+          color: #fff;
+          font-size: 0.55rem;
+          text-align: center;
+          margin-top: 0.5rem; }
+      .dishes .main .dishes_txt .introduction {
+        width: 100%;
+        margin-top: 1.75rem; }
+        .dishes .main .dishes_txt .introduction h3 {
+          color: #9e9e9f;
+          line-height: 1.5rem; }
+        .dishes .main .dishes_txt .introduction p {
+          color: #9e9e9f;
+          line-height: 1rem; }
+
+.empty {
+  background-color: #ccc !important; }
+
