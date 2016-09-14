@@ -55,7 +55,47 @@
             <dl class="rice">
                 <dt class="food_name">米饭类</dt>
                 <dd>
+                    <div class="food" data-food="1">
+                        <div class="pic clearfix">
+                            <img src="img/product.jpg" width="100%">
+                        </div>
+                        <div class="food_detail">
+                            <span class="detail">土豆沙拉</span>
+                            <span class="detail">土豆沙拉</span>
+                        <span class="price">
+                            <em class="right">&yen;30</em>
+                            <em class="wrong">&yen;50</em>
+                        </span>
+                            <div class="choose_button">
+                                <a href="javascript:;" data-food-id="1" data-food-name="111111" data-food-price="11" class="minus iconfont icon-reduce"></a>
+                                <span class="num">0</span>
+                                <a href="javascript:;" data-food-id="1" data-food-name="111111" data-food-price="11" class="plus iconfont icon-add"> </a>
+                            </div>
+                        </div>
+                    </div>
+                </dd>
+                <dd>
                     <div class="food">
+                        <div class="pic clearfix">
+                            <img src="img/product.jpg" width="100%">
+                        </div>
+                        <div class="food_detail">
+                            <span class="detail">土豆沙拉</span>
+                            <span class="detail">土豆沙拉</span>
+                        <span class="price">
+                            <em class="right">&yen;30</em>
+                            <em class="wrong">&yen;50</em>
+                        </span>
+                            <div class="choose_button">
+                                <a href="javascript:;" data-food-id="2" data-food-name="22222" data-food-price="22" class="minus iconfont icon-reduce"></a>
+                                <input type="text" value="0" class="num" readOnly="true"/>
+                                <a href="javascript:;" data-food-id="2" data-food-name="22222" data-food-price="22" class="plus iconfont icon-add"> </a>
+                            </div>
+                        </div>
+                    </div>
+                </dd>
+                <dd>
+                    <div class="food" data-food="3">
                         <div class="pic clearfix">
                             <img src="img/product.jpg" width="100%">
                         </div>
@@ -75,47 +115,7 @@
                     </div>
                 </dd>
                 <dd>
-                    <div class="food">
-                        <div class="pic clearfix">
-                            <img src="img/product.jpg" width="100%">
-                        </div>
-                        <div class="food_detail">
-                            <span class="detail">土豆沙拉</span>
-                            <span class="detail">土豆沙拉</span>
-                        <span class="price">
-                            <em class="right">&yen;30</em>
-                            <em class="wrong">&yen;50</em>
-                        </span>
-                            <div class="choose_button">
-                                <a href="javascript:;" class="minus iconfont icon-reduce"></a>
-                                <input type="text" value="0" class="num" readOnly="true"/>
-                                <a href="javascript:;" class="plus iconfont icon-add"> </a>
-                            </div>
-                        </div>
-                    </div>
-                </dd>
-                <dd>
-                    <div class="food">
-                        <div class="pic clearfix">
-                            <img src="img/product.jpg" width="100%">
-                        </div>
-                        <div class="food_detail">
-                            <span class="detail">土豆沙拉</span>
-                            <span class="detail">土豆沙拉</span>
-                        <span class="price">
-                            <em class="right">&yen;30</em>
-                            <em class="wrong">&yen;50</em>
-                        </span>
-                            <div class="choose_button">
-                                <a href="javascript:;" class="minus iconfont icon-reduce"></a>
-                                <input type="text" value="0" class="num" readOnly="true"/>
-                                <a href="javascript:;" class="plus iconfont icon-add"> </a>
-                            </div>
-                        </div>
-                    </div>
-                </dd>
-                <dd>
-                    <div class="food">
+                    <div class="food" data-food="4">
                         <div class="pic clearfix">
                             <img src="img/product.jpg" width="100%">
                         </div>
@@ -1131,16 +1131,25 @@
 <script>
     $(function(){
         $(".shopping_car").on('click',function(){
-            $(".mask").fadeIn('fast');
-            $(".cart_main").css({
-                'transform': 'translate3d(0,0,0)',
-                '-webkit-transform': '-webkit-translate3d(0,0,0)'
-            });
-            $(".mask").css('overflow','hidden');
-            $('.mask').bind('touchmove', function (e) {
-                e.stopPropagation();
-                return false;
-            });
+            if ($('.mask').is(":hidden")) {
+                $(".mask").fadeIn('fast');
+                $(".cart_main").css({
+                    'transform': 'translate3d(0,0,0)',
+                    '-webkit-transform': '-webkit-translate3d(0,0,0)'
+                });
+                $(".mask").css('overflow', 'hidden');
+                $('.mask').bind('touchmove', function (e) {
+                    e.stopPropagation();
+                    return false;
+                });
+            } else {
+                $(".cart_main").css({
+                    'transform': 'translate3d(0,100%,0)',
+                    '-webkit-transform': '-webkit-translate3d(0,100%,0)'
+                });
+                $(".mask").css('overflow', 'auto');
+                $(".mask").fadeOut('fast');
+            }
         })
         $(".mask,.remove").on('click',function(){
             $(".cart_main").css({
@@ -1150,49 +1159,52 @@
             $(".mask").css('overflow','auto');
             $(".mask").fadeOut('fast');
         })
-        var oBox = document.getElementById("box");
-        var oList = document.getElementById("list");
-        // var aBtn = getClass(oBox,"plus");
-        // for(var i=0; i<aBtn.length; i++){
-        //     aBtn[i].index = i;
-        //     aBtn[i].onclick = function(){
-        //         /* Act on the event */
-        //         var oLi = document.createElement("li");
-        //         oLi.className = "entity_row";
-        //         oLi.innerHTML +='<span class="entity_name"><em>土豆沙拉</em></span>';
-        //         oLi.innerHTML +='<span class="entity_price"><em>&yen;30</em></span>';
-        //         oLi.innerHTML +='<span class="choose_button"><a href="javascript:;" class="minus iconfont icon-reduce"></a><input type="text" value="0" class="num" readOnly="true"/><a href="javascript:;" class="plus iconfont icon-add"> </a></span>';
-        //         oList.appendChild(oLi);
-        //         // var delBtn = oLi.getElementsByClassName("plus");
-        //         // delBtn.onclick = function(){
-        //         //     oList.removeChild(oLi);
-        //         // }
-        //     }
-        // }
-            
-            
-            
-        // function getClass(oBox,tagname){}
-        //加的效果
-        $(".foods .plus").on('touchstart',function(){
-            var n=$(this).prev().val();
-            var num=parseInt(n)+1;
-            $(this).prev().val(num);
-            $(this).siblings().show();
+
+            // JSON
+            // var food = [
+            //     {id:"1",name:"法式沙拉",price:"30"},
+            //     {id:"2",name:"焦糖奶昔",price:"50"},
+            //     {id:"3",name:"黑椒牛排",price:"20"},
+            //     {id:"4",name:"麦辣鸡腿汉堡",price:"15"}
+            // ];
+
+        $(".plus").on('touchstart',function(){
+            var fd = $(this).data('food-id');
+            var fn = $(this).data('food-name');
+            var fp = $(this).data('food-price');
+            console.log(fd);
+            console.log(fn);
+            console.log(fp);
+            // console.log(111)
+            var num = $(this).siblings('span').html();
+            num+=1;
             //购物车效果
-            var oLi = document.createElement("li");
-                oLi.className = "entity_row";
-                oLi.innerHTML +='<span class="entity_name"><em>土豆沙拉</em></span>';
-                oLi.innerHTML +='<span class="entity_price"><em>&yen;30</em></span>';
-                oLi.innerHTML +='<span class="choose_button"><a href="javascript:;" class="minus iconfont icon-reduce"></a><input type="text" value="0" class="num" readOnly="true"/><a href="javascript:;" class="plus iconfont icon-add"> </a></span>';
-                oList.appendChild(oLi);
-            $(".cart_list .minus").on("click",function(){
-                oList.removeChild(oLi);
+
+            var dom_str = 
+            '<li class="entity_row">' + 
+                '<span class="entity_name">' + 
+                '<em>土豆沙拉</em></span><span class="entity_price"><em>&yen;30</em></span>' + 
+                '<span class="choose_button">' + 
+                '<a href="javascript:;" class="minus iconfont icon-reduce"></a>' + 
+                '<span class="num"></span>' + 
+                '<a href="javascript:;" class="plus iconfont icon-add"> </a>' + 
+                '</span>' + 
+            '</li>';
+            var dom = $(dom_str);
+            dom.find('.minus').on('click',function(){
+                console.log('222');
             })
 
+            $(".cart_list").append(dom);
+            $(".cart_list li").attr('data-food-id', fd);
         });
+        /*
+        $(".entity_row[data-food]").on('click',function(){
+            console.log(111);
+        })*/
+
         //减的效果
-        $(".foods .minus").on('touchstart',function(){
+        $(".food .minus").on('touchstart',function(){
             var n=$(this).next().val();
             var num=parseInt(n)-1;
             if(num==0){
@@ -1202,9 +1214,6 @@
             $(this).next().val(num);
 
         });
-        $(".cart_list .minus").on("click",function(){
-            oList.removeChild(oLi);
-        })
         // var r = $('.foods').scrollTop();
         // console.log(r);
         $(".foods").scroll(function(event) {

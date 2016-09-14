@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>KFC</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+	<link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+<!-- container -->
+<div class="container match_msg">
+	<div class="bar">
+		<div class="spot clearfix">
+			<span></span><span></span><span></span>
+		</div>
+		<h1>留下你的开跑信息</h1>
+		<a href="javascript:;" class="arrow"></a>
+	</div>
+	<div class="user">
+		<span class="head">
+			<img src="img/head.jpg" width="100%">
+		</span>
+		<div class="name">
+			<em>昵称：</em><br>
+			<p>朱凌波朱凌波朱凌波朱凌波朱凌波朱凌波</p>
+		</div>
+	</div>
+	<div class="choose">
+		<h3>点击选择跑者标签（至多三个）</h3>
+		<ul class="clearfix">
+			<li>
+				<span class="txt">天生翅粉</span>
+				<input type="checkbox" name="runner_label[]" value="天生翅粉">
+			</li>
+			<li>
+				<span class="mark no_set"></span>
+				<span class="txt">炸鸡控</span>
+				<input type="checkbox" name="runner_label[]" value="炸鸡控">
+			</li>
+			<li>
+				<span class="txt">汉堡控</span>
+				<input type="checkbox" name="runner_label[]" value="汉堡控">
+			</li>
+			<li>
+				<span class="txt">跑成闪电</span>
+				<input type="checkbox" name="runner_label[]" value="跑成闪电">
+			</li>
+			<li>
+				<span class="txt">跑遍全球</span>
+				<input type="checkbox" name="runner_label[]" value="跑遍全球">
+			</li>
+			<li>
+				<span class="txt">夜跑侠</span>
+				<input type="checkbox" name="runner_label[]" value="夜跑侠">
+			</li>
+			<li>
+				<span class="txt">装备党</span>
+				<input type="checkbox" name="runner_label[]" value="装备党">
+			</li>
+			<li>
+				<span class="txt">好兔子</span>
+				<input type="checkbox" name="runner_label[]" value="好兔子">
+			</li>
+			<li>
+				<span class="txt">节奏跑</span>
+				<input type="checkbox" name="runner_label[]" value="节奏跑">
+			</li>
+		</ul>
+		<a href="javascript:;" class="yes">
+			下一步
+		</a>
+	</div>
+</div>
+<!-- container -->
+<script src="js/app.js" id="appjs" data-adapt="1" ></script>
+<script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
+<script type="text/javascript">
+$(function() {
+	$(".choose ul li").on('click',function(){
+		if ($(this).find('input:checked')){
+			// set not select
+			$(this).toggleClass('set');
+		}
+		if($(":checkbox:checked").length>3) {
+			// set select
+			$(this).removeClass('set');
+			return false;
+		}
+	})
+	
+});
+</script>
+</body>
+</html>

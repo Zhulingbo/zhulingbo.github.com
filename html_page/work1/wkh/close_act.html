@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/rem_w.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="mask_close">
+   <div class="main">
+       <span class="title">你确定要关闭活动吗？</span>
+       <div class="but_box clearfix">
+         <a href="javascript:;" class="close_but1">关闭活动</a>
+         <a href="javascript:;" class="close_but2">取消</a>
+       </div>  
+   </div>
+</div>
+	<!-- container -->
+	<div class="container join">
+         <div class="top">
+             <p><img src="img/star.png" width="100%">活动名称的标题</p>
+             <p class="date">8月21日</p>
+             <span class="title">拼饭</span>
+         </div>
+         <div class="art">
+             <div class="text">
+                <p>活动内容文字活动内容文字活动内容文字活动内容文字活动内容文字活动内容文字活动内容文字活动内容文字活动内容文字活动内容文字活动内容文字活动内容文字活动内容文字活动内容文字</p>
+                <p>活动内容文字活动内容文字活动内容文字活动内容文字活动内容文字活动内容文字活动内容文字活动</p>
+             </div>
+             <img src="img/detail.jpg" width="100%">
+             <span class="zan"><a href="javascript:;" class="hand"></a>300</span>
+             <div class="clear-both"></div>
+         </div>
+         <ul class="join_list">
+            <li class="clearfix">
+               <em></em>
+               <span>发起人：M太太</span>
+               <img src="img/img1.jpg" width="100%" class="peo_img">
+            </li>
+            <li class="clearfix">
+               <em></em>
+               <span>活动时间：2015.8.21-2015.9.21</span>
+            </li>
+         </ul>
+         <a href="javascript:;" class="close_act">关闭活动</a>
+	</div>
+	<!-- container -->
+    
+<script type="text/javascript">
+ $(function(){
+	 //关闭的弹层
+     $('.mask_close').hide();
+	 $('.join .close_act').on('click',function(){
+	    $('.mask_close').show();
+	 })
+	 $('.mask_close .close_but2').on('click',function(){
+	    $('.mask_close').hide();
+	 })
+	 $('.join .art .hand').on('click',function(){
+	  $(this).toggleClass('red_hand');
+	})
+  })
+</script>
+</body>
+</html>

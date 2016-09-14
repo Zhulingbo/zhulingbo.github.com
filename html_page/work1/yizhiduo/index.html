@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/rem_w.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<!--loading-->
+	<!--<section class="loading">
+		<img src="img/logo.jpg" class="logo">
+		<div class="loading_gif">
+			<img src="img/loading_gif.gif" height="100%"/>
+			<p>loading...</p>
+		</div>
+	</section>-->
+	<!--loading-->
+	<!--mask-->
+	<div class="mask rule_mask">
+		<h3>活动细则：</h3>
+		<p>关注宜芝多服务号，参与母亲节祝福，在母亲节为妈妈们预购宜芝多特供礼物，
+<br />
+<br />
+为自己的母亲带去一份惊喜，一份关爱，回馈妈妈们对我们一直以来的照顾。
+<br />
+<br />
+参与预购活动，预购电子券将会由系统发放到服务号的卡包中，用户可在服务号中查询购电子券，联系附近门店领取母亲节的礼品。</p>
+		<span class="close"></span>
+	</div>
+	<!--mask-->
+	<!-- container -->
+	<div class="container bread">
+        <div class="top clearfix">
+            <img src="img/logo.jpg" class="pic1">
+            <span class="txt1">宜芝多芝士蛋糕</span>
+            <span class="subnav"></span>
+        </div>
+        <div class="title">
+          <img src="img/title.png" height="100%">
+        </div>
+        <div class="video">
+           <img src="img/video1.gif" height="100%">
+        </div>
+        <div class="video">
+           <img src="img/video2.gif" height="100%">
+        </div>
+        <div class="active clearfix">
+			<span>点击图片送出祝福</span>
+           <a href="javascript:;" class="act">活动规则</a>
+        </div>
+    </div>
+	<!-- container -->
+</body>
+</html>
+<script>
+	$(".act").on('touchend',function(){
+		$(".rule_mask").show();
+	})
+	$(".close").on('touchend',function(){
+		$(".rule_mask").hide();
+	})
+</script>

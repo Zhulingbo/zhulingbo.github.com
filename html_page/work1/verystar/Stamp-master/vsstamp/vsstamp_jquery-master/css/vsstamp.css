@@ -1,0 +1,90 @@
+/*STAMP SCREEN*/
+#vsstamp-messages {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  line-height:20px;
+  height:20px;
+  top: 72px;
+  color:white;
+}
+.vsstamp-progress-bar {
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  background-color: #fff;
+  position: absolute;
+  top: -90%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1em;
+  height: 1em;
+  -webkit-animation: dim 0.5s 0.5s infinite alternate;
+  -moz-animation: dim 0.5s 0.5s infinite alternate;
+  -o-animation: dim 0.5s 0.5s infinite alternate;
+  animation: dim 0.5s 0.5s infinite alternate;
+}
+.vsstamp-progress-bar:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  background-color: #fff;
+  right: 1.5em;
+  -webkit-animation: dim 1s infinite alternate;
+  -moz-animation: dim 1s infinite alternate;
+  -o-animation: dim 1s infinite alternate;
+  animation: dim 1s infinite alternate;
+}
+.vsstamp-progress-bar:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  background-color: #fff;
+  left: 1.5em;
+  -webkit-animation: dim 1s 1s infinite alternate;
+  -moz-animation: dim 1s 1s infinite alternate;
+  -o-animation: dim 1s 1s infinite alternate;
+  animation: dim 1s 1s infinite alternate;
+}
+/* Keyframes */
+@-moz-keyframes dim {
+  from {
+    background-color: #fff;
+  }
+  to {
+    background-color: rgba(255,255,255,0.2);
+  }
+}
+@-webkit-keyframes dim {
+  from {
+    background-color: #fff;
+  }
+  to {
+    background-color: rgba(255,255,255,0.2);
+  }
+}
+@-o-keyframes dim {
+  from {
+    background-color: #fff;
+  }
+  to {
+    background-color: rgba(255,255,255,0.2);
+  }
+}
+@keyframes dim {
+  from {
+    background-color: #fff;
+  }
+  to {
+    background-color: rgba(255,255,255,0.2);
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/rem_w.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="mask_item">
+   <div class="main">
+      <h2>“业主发起”免责声明</h2>
+      <div class="con">
+         <p>1、本免责声明适用于参与本网站所有活动的所有人员。</p>
+         <p>2、活动中本网站、发起人、赞助商对活动进行组织协调，但活动性质属于自愿参加、风险自担、责任自负，参与者均应为完全行为能力人，本网站、发起人、赞助商并不从活动组织中收取任何费用或盈利，亦不构成本网站、发起人、赞助商的经营行为，本网站、发起人、赞助商不对任何个人或机构承担民事赔偿责任或补充民事赔偿责任。</p>
+         <p>3、本网站、发起人、赞助商对活动仅提供信息发布服务，并不担保或提供任何参加人的人身和财产的安全保障。本网站、发起人、赞助商的组织和发起户外活动之行为，在任何情况下不构成违反对设施设备未尽安全保障义务，不构成违反服务管理未尽安全保障义务，不构成违反防范制止侵权行为未尽安全保障义务，也不构成对未成年人、无民事行为能力人、限制民事行为能力人未尽安全保障义务。</p>
+         <p>4、活动报名后本声明将自动生效并表明参加者已接受，否则，请退出参加报名活动。</p>
+      </div>
+      <a href="javascript:;" class="agree1">我同意</a>
+   </div>
+</div>
+	<!-- container -->
+	<div class="container wkh">
+        <ul class="act">
+           <li class="clearfix">
+              <em></em>
+              <input type="text" placeholder="饼干大作战">
+              <span>活动名称</span>
+           </li>
+           <li class="clearfix">
+              <em></em>
+              <input type="date">
+              <span>活动开始</span>
+           </li>
+           <li class="clearfix">
+              <em></em>
+              <input type="date">
+              <span>活动结束</span>
+           </li>
+           <li class="clearfix">
+              <em></em>
+              <div class="xiaoqu clearfix">
+                 <span>小区：</span>
+                 <select>
+                    <option>小区1</option>    
+                 </select>
+              </div>
+              <span>活动地点</span>
+           </li>
+           <li class="clearfix">
+              <em></em>
+              <select>
+                  <option>请选择</option>
+                  <option>拼车</option>
+                  <option>拼饭</option>
+                  <option></option>
+              </select>
+              <span>活动类型</span>
+           </li>
+           <li class="clearfix">
+               <em></em>
+               <div class="img_box">
+                   <div class="small_img clearfix">
+                      <img src="img/act1.png" width="100%">
+                      <img src="img/act2.png" width="100%">
+                      <img src="img/act3.png" width="100%">
+                      <img src="img/act4.png" width="100%">
+                      <a href="javascript:;"><img src="img/more.jpg" width="100%"></a>
+                   </div>
+                   <span>活动图片</span>
+               </div>
+           </li>
+        </ul>
+        <div class="act_txt">
+            <span></span>
+            <textarea placeholder="请输入活动内容，如有奖励信息请尽量说"></textarea>
+        </div>
+        <div class="agree">
+            <input type="checkbox" checked>我已阅读<a href="javascript:;" class="item">《免责条款》</a><br />
+            <button>发布</button>
+        </div>
+	</div>
+	<!-- container -->
+    
+<script type="text/javascript">
+$(function(){
+   //规则条款弹层
+   $('.mask_item').hide();
+   $('.wkh .agree .item').on('click',function(){
+	   $('.mask_item').show();
+	})
+   $('.mask_item .agree1').on('click',function(){
+	   $('.mask_item').hide();
+	})
+ })
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>KFC</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+	<link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+<!-- container -->
+<div class="container sign_finish">
+	<div class="spot clearfix">
+		<span></span><span></span><span></span>
+	</div>
+	<a href="javascript:;" class="back">
+		<img src="img/back.png" width="100%">
+	</a>
+	<p class="txt1">提交成功</p>
+	<p class="txt2">抢占领跑名额从拼手速开始<br>
+ <br>
+我们将审核名单于2016年8月14日18点前<br>
+以手机短信形式告知是否报名成功</p>
+	<div class="main">
+		<img src="img/finish_tit.png" alt="" class="title">
+	</div>
+</div>
+<!-- container -->
+<script src="js/app.js" id="appjs" data-adapt="1" ></script>
+<script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
+<script type="text/javascript">
+$(function() {
+	$(".match").on('touchstart',function(){
+		$(".match_detail").show();
+	})
+	$(".match_detail .close").on('touchstart',function(){
+		$(".match_detail").hide();
+	})
+
+	$(".apply").on('touchstart',function(){
+		$(".apply_mask").show();
+	})
+	$(".apply_mask .close").on('touchstart',function(){
+		$(".apply_mask").hide();
+	})
+});
+</script>
+</body>
+</html>

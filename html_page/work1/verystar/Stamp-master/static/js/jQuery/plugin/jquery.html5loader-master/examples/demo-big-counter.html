@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" /><title>Gianluca Guarini- html5 loader jQuery plug-in - line preloader</title>
+<meta name="Description" content="With this jQuery plug in you can preload your page getting the percentage of bytes loaded just in HTML5" />
+<link href='http://fonts.googleapis.com/css?family=Varela+Round|Lobster+Two' rel='stylesheet' type='text/css'>
+
+<style type="text/css">
+body {
+  margin: 0;
+  padding: 0;
+  color:#333;
+}
+#html5Loader{
+	top:0;
+	left:0;
+	background:#00406E;
+	background:-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 960, from(#1B8EE0), to(#00406E)) no-repeat #00406E;
+	background: -moz-radial-gradient(50% 50% 0deg,ellipse farthest-corner, #1B8EE0, #00406E, #00406E 170%);
+	background: -o-radial-gradient(50% 50%, #1B8EE0, #00406E);
+	margin:0;
+	position:fixed;
+}
+#html5Loader .fallback {
+	top:50%;
+	position:absolute;
+	text-align:center;
+	width:100%;
+	color:white;
+	vertical-align: middle;
+	display: block;
+	font-style: normal;
+	font-family "Lobster Two";
+	font-size:100px;
+}
+div#wrapper > * {
+	width:400px;
+}
+</style>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="../src/animations/jquery.big-counter.js"></script>
+	<script src="../src/jquery.html5Loader.js"></script>
+
+</head>
+<body>
+	<div id="html5Loader"></div>
+	<div id="wrapper">
+		<video width="960" height="400" id="myVideo" controls="controls" >
+			<source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+			<source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm; codecs="vp8, vorbis"' />
+			<source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg; codecs="theora, vorbis"' />
+		</video>
+		<video width="560" height="400" id="myVideo2" controls="controls" >
+			<source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'  />
+			<source src="http://clips.vorwaerts-gmbh.de/VfE.webm"      type='video/webm; codecs="vp8, vorbis"' />
+			<source src="http://clips.vorwaerts-gmbh.de/VfE.ogv"       type='video/ogg; codecs="theora, vorbis"'  />
+		</video>
+		<audio id="myAudio" controls="controls">
+			<source src="../files/creep.mp3" />
+			<source src="../files/creep.ogg" />
+		</audio>
+		<img src="../files/image1.jpg">
+		<img src="../files/image2.jpg">
+		<img src="../files/image3.jpg">
+		<img src="../files/image4.jpg">
+		<img src="../files/image5.jpg">
+		<img src="../files/image6.jpg">
+		<img src="../files/image7.jpg">
+		<img src="../files/image8.jpg">
+		<img src="../files/image9.jpg">
+		<img src="../files/image10.jpg">
+
+
+	</div>
+	<script type="text/javascript">
+	//init
+	var loaderAnimation = $("#html5Loader").LoaderAnimation({
+		onComplete:function(){
+			console.log("preloader animation completed!");
+		}
+	});
+	$.html5Loader({
+			filesToLoad:'../src/files.json',
+			onComplete: function () {
+				console.log("All the assets are loaded!");
+			},
+			onUpdate: loaderAnimation.update
+	});
+	</script>
+
+	</body>
+</html>

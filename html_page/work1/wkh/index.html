@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/rem_w.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<!-- container -->
+	<div class="container wkh">
+      <div class="wrap">
+        <div class="index_top">
+          <a href="javascript:;" class="but1">
+            我要发起
+            <img src="img/arrow_right.png" width="100%" class="arrow"> 
+          </a>
+          <div class="banner">
+             <div class="swiper-container">
+                 <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <img src="img/banner1.jpg" width="100%">
+                      </div>
+                      <div class="swiper-slide" style="background:#000">
+                          
+                      </div>
+                      <div class="swiper-slide" style=" background:yellow">
+                          
+                      </div>
+                 </div>
+                 <div class="swiper-pagination"></div>
+             </div>                      
+          </div><!--banner end-->
+        </div>
+        <!--top end-->
+        <div class="act_main">
+          <div class="pro_box">
+              <a href="javascript:;" class="pro">
+                    <div class="top">
+                      <div class="top_left clearfix">
+                         <img src="img/img1.jpg" class="photo">
+                         <div class="desc">
+                            <p class="tit">全新日用品打包甩卖</p>
+                            <p class="peo">M太太</p>
+                         </div>
+                      </div>
+                  </div>
+                  <div class="txt">某某某看得开的看得开某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某
+                  </div>
+                  <div class="bottom clearfix">
+                     <span class="add"><img src="img/qu.png" width="100%" class="qu">小区1</span>
+                     <img src="img/photo.png" width="100%" class="photo">
+                     <span class="min">进行中</span>
+                  </div>
+              </a>
+              <span class="title">跳蚤市场</span>
+              <span class="zan"><a href="javascript:;" class="hand"></a>300</span>
+          </div>
+          
+          <div class="pro_box">
+              <a href="javascript:;" class="pro">
+                    <div class="top">
+                      <div class="top_left clearfix">
+                         <img src="img/img2.jpg" class="photo">
+                         <div class="desc">
+                            <p class="tit">玩具大作战</p>
+                            <p class="peo">王小明</p>
+                         </div>
+                      </div>
+                  </div>
+                  <div class="txt">某某某看得开的看得开某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某
+                  </div>
+                  <div class="bottom clearfix">
+                     <span class="add"><img src="img/qu.png" width="100%" class="qu">小区1</span>
+                     <span class="end">已结束</span>
+                  </div>
+              </a>
+              <span class="title1">拼车</span>
+              <span class="zan"><a href="javascript:;" class="hand"></a>589</span>
+          </div>
+          
+          <div class="pro_box">
+              <a href="javascript:;" class="pro">
+                    <div class="top">
+                      <div class="top_left clearfix">
+                         <img src="img/img1.jpg" class="photo">
+                         <div class="desc">
+                            <p class="tit">全新日用品打包甩卖</p>
+                            <p class="peo">M太太</p>
+                         </div>
+                      </div>
+                  </div>
+                  <div class="txt">某某某看得开的看得开某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某
+                  </div>
+                  <div class="bottom clearfix">
+                     <span class="add"><img src="img/qu.png" width="100%" class="qu">小区1</span>
+                     <img src="img/photo.png" width="100%" class="photo">
+                     <span class="min">进行中</span>
+                  </div>
+              </a>
+              <span class="title">跳蚤市场</span>
+              <span class="zan"><a href="javascript:;" class="hand"></a>300</span>
+          </div>
+        </div><!--act_main end-->
+        <a href="javascript:;" class="loading"><img src="img/circle.png" width="100%">内容加载中</a>
+      </div>
+      <!--wrap end-->
+	</div>
+	<!-- container -->
+    
+<script type="text/javascript">
+$(function(){
+    var swiper = new Swiper('.banner .swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+		autoplay:2000,
+		loop:true,
+    });
+   $('.act_main .zan .hand').on('click',function(){
+	  $(this).toggleClass('red_hand');
+	})
+})
+</script>
+</body>
+</html>

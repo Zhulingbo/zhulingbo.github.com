@@ -1,0 +1,387 @@
+body, h1, h2, h3, p, dl, ul, ol, form,fieldset,legend,label,textarea,input{
+    margin: 0;
+    padding: 0;
+    font-size:0.6rem;
+	font-family:"Microsoft Yahei,arial";
+}
+dd {
+    margin-left: 0;
+}
+:focus{outline:0;}
+ol,ul{list-style-type:none;}
+.clear-both{clear:both;height:0;overflow:hidden}
+a{text-decoration:none;}
+a:hover{text-decoration:none;}
+img{border: 0;vertical-align: middle;-ms-interpolation-mode: bicubic; display:block;}
+em,var,i{font-style:normal;}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+clearfix:after {
+    clear: both;
+}
+html,body,.container{width: 100%;height: 100%;overflow: hidden;padding: 0;background-color: #272d47;}
+.swiper-container{height: 100%;position: relative;overflow: hidden;}
+.p1,.p2,.p3,.p4,.p5{height: 100%;position: relative;overflow: hidden;}
+
+/*loading*/
+.loading{width: 100%;height: 100%;overflow: hidden;background: url('../img/bg1.jpg') no-repeat top;-webkit-background-size: 100%; z-index: 100;
+    background-size: 100%;position: fixed;left: 0;top: 0;}
+.loading .loading_in{position: absolute;left: 50%;top: 50%;-webkit-transform:translate(-50%,-50%);}
+.loading .loading_in p{text-align: center;color: #4ce5cf;font-size: 0.95rem;}
+.loading .moon{width: 8.55rem;position: relative;}
+.loading .rocket{width: 3.95rem;position: absolute;right: 0.375rem;bottom: 0.375rem;
+    -webkit-animation: loading_zhuan 5s infinite linear;
+    -o-animation: loading_zhuan 5s infinite linear;
+    animation: loading_zhuan 5s infinite linear;
+    -webkit-transform-origin:top left;
+}
+.loading .loading_in .ball{position:relative;}
+.loading .loading_in .ball .moon_ball{width: 4.7rem;position: absolute;left: 50%;top: 50%;-webkit-transform:translate(-50%,-50%);}
+.loading .loading_in .ball .moon_ball img{
+    -webkit-animation: loading_zhuan2 7s infinite linear;
+    -o-animation: loading_zhuan2 7s infinite linear;
+    animation: loading_zhuan2 7s infinite linear;
+}
+/*p1*/
+.parallax-bg{width: 130%;height: 100%;position: absolute;left: 0;top: 0;background: url('../img/bg.jpg') no-repeat center;-webkit-background-size: cover;
+    background-size: cover;}
+
+.btn img{margin: 0 auto;}
+.p1 .txt{width: 12.25rem;margin: 1rem auto auto auto;opacity: 0;}
+.p1 .anim_box{width: 82%;margin: 1rem auto;position: relative;}
+.p1 .mooncake1{width: 2.6rem;position: absolute;left: 25%;top: 40%;-webkit-transform:translateY(-20rem);transform:translateY(-20rem);
+}
+.p1 .mooncake2{width: 2.75rem;position: absolute;left: 14%;top: 45.5%;-webkit-transform:translateY(-20rem);
+}
+.p1 .mooncake3{width: 2.65rem;position: absolute;right: 15.5%;top: 45%;-webkit-transform:translateY(-20rem);
+}
+.p1 .rili{width: 5.15rem;position: absolute;top: 0;right: 1.85rem;z-index: -1;}
+.p1 .flag{width: 3.55rem;position: absolute;top:9.75rem;right: 4.3rem;}
+
+/*p2*/
+.p2 .txt{width: 8.6rem;margin: 1rem auto auto auto;opacity: 0;}
+.p2 .txt2{width: 5rem;position: absolute;left: 1rem;top: 0.5rem; opacity: 0;}
+.p2 .gift{width: 100%;position: relative;height: 18rem;margin-top: 1rem}
+
+.blue_box{width: 13.7rem;position: absolute;height: 9.65rem;left: 50%;margin-left: -6.85rem;bottom: 1rem;}
+.pink_box{width: 11.95rem;position: absolute;height: 8.35rem;left: 50%;margin-left: -5.95rem;bottom: 1rem;-webkit-transform:translateY(0);-webkit-transition:all 1s;}
+.yellow_box{width: 9.7rem;position: absolute;height: 6.8rem;left: 50%;margin-left: -4.85rem;bottom: 1.1rem;-webkit-transform:translateY(0);-webkit-transition:all 1s;}
+.green_box{width: 8.4rem;position: absolute;height: 5.9rem;left: 50%;margin-left: -4.2rem;bottom: 0.6rem;-webkit-transform:translateY(0);-webkit-transition:all 1s;}
+
+.gift .blue1{width: 100%;height: 9.65rem;position: absolute;left: 0;bottom: 0;}
+.gift .blue2{width: 100%;height: 7.1rem;position: absolute;left: 0;bottom: 0}
+.gift .pink1{width: 100%;height: 8.35rem;position: absolute;left: 0;bottom: 0;}
+.gift .pink2{width: 100%;height: 6.1rem;position: absolute;left: 0;bottom: 0}
+.gift .yellow1{width: 100%;height: 6.8rem;position: absolute;left: 0;bottom: 0;}
+.gift .yellow2{width: 100%;height: 4.95rem;position: absolute;left: 0;bottom: 0}
+.gift .green1{width: 100%;height: 5.9rem;position: absolute;left: 0;bottom: 0;}
+.gift .green2{width: 100%;height: 4.3rem;position: absolute;left: 0;bottom: 0}
+.gift .card{width: 6.25rem;position: absolute;right: 0;top: -1rem;}
+
+/*p3*/
+.p3 .txt{width: 12.25rem;margin: 1rem auto auto auto;opacity: 0}
+.p3 .people{width: 14.1rem;position: relative;margin: 1.2rem auto;height: 14.95rem;}
+.p3 .people .gift_box{width: 2.1rem;position: absolute;}
+.p3 .people .box_1{left: 3.5rem;top: 1.85rem;}
+.p3 .people .box_2{left: 4.7rem;bottom: 4rem;}
+.p3 .people .box_3{right: 2.75rem;top: 7.3rem;}
+.p3 .people .fly_cake{width: 3.9rem;height: 2.1rem;position: absolute;left: 0;top: 0;}
+.p3 .people .fly_cake .fly_moon_cake{width: 1.3rem;position: absolute;right: 0;bottom: 0;opacity: 0}
+.p3 .people .fly_cake .line{width: 2.55rem;position: absolute;right: 0;bottom: 0;opacity: 0}
+.p3 .people .fly_cake .dian{width: 0.35rem;position: absolute;left: 0;top: 0.2rem;opacity: 0}
+/*p4*/
+.p4 .moon{width: 46%;position: absolute;left: 0.1rem;top: 0.1rem;-webkit-transform:translate(0);-webkit-transition:all 0.5s;}
+.p4 .pic{width: 97%;margin: 0.4rem auto auto auto;position: relative;}
+.p4 .txt{width: 54%;margin: 0 auto;}
+.btn{height: 15%;display: block;width: 57%;position: absolute;left: 50%;bottom: 1rem;-webkit-transform:translate(-69%,0);-webkit-tap-highlight-color:rgba(255,0,0,0);}
+.left{width: 1.5rem;height: 1.5rem;border-left: 0.1rem solid #fff;border-bottom: 0.1rem solid #fff;position: absolute;left: 0.1rem;top: 50%;z-index: 50;-webkit-transform:rotate(45deg) translate(0,-50%);}
+.right{width: 1.5rem;height: 1.5rem;border-right: 0.1rem solid #fff;border-bottom: 0.1rem solid #fff;position: absolute;right: 0.1rem;top: 50%;z-index: 50;-webkit-transform:rotate(-45deg) translate(0,-50%);}
+/*friend*/
+/*friend*/
+.friend{background: url('../img/bg1.jpg') no-repeat;-webkit-background-size: 100%;
+background-size: 100%;}
+.friend .friend_img{width: 90%;margin: 0 auto;}
+.friend .to_friend, .friend .to_friend_close{width: 4.25rem;height: 3.5rem;display: block;margin: 0 auto;-webkit-tap-highlight-color:rgba(255,0,0,0);background: url('../img/mail_open.png') no-repeat;-webkit-background-size: 100%;
+background-size: 100%;}
+.friend .to_friend_close{background: url('../img/mail_close.png') no-repeat;-webkit-background-size: 100%;
+background-size: 100%;}
+.enter_box{width: 100%;padding: 0 9%;box-sizing:border-box;margin-top: 6%;}
+.enter_box p{color: #4ce5cf;font-size: 1rem;}
+.enter_box input{border:0;background: rgba(0,0,0,0);font-size: 1rem;padding-left: 0.2rem;color: #4ce5cf;width: 40%;text-align: center;}
+.enter_box .to input{text-align: left;}
+.enter_box textarea{line-height: 1.75rem;width: 100%;border:0;background: url(../img/txt_bg.png) repeat-y;font-size: 0.7rem;height: 5.25rem;color: #7786aa;-webkit-background-size: 100%;
+background-size: 100%;}
+.enter_box .from{text-align: right;}
+
+/*also*/
+.also{background: url('../img/bg3.jpg') no-repeat;-webkit-background-size: 100%;
+background-size: 100%;width: 100%;height: 100%;position: fixed;left: 0;top: 0;z-index: 90;}
+.also .txt{width: 100%;height: 5.25rem;padding: 0 0.2rem;box-sizing:border-box;background: url('../img/txt_bg.png') repeat-y;-webkit-background-size: 100%;
+background-size: 100%;overflow: auto;}
+.also .txt p{line-height: 1.75rem;font-size: 0.7rem; word-wrap:break-word; word-break:normal;color: #7786aa;}
+.also .enter_box{margin-top: 72%}
+/*share*/
+.mask{width: 100%;height: 100%;/position: fixed;left: 0;top: 0;z-index: 90;display: none;}
+.mask .share{width: 100%;height: 100%;position: absolute;left: 0;top: 0;background: rgba(0,0,0,0.9);}
+.mask .share .moon{width:5rem;position: absolute;right: 15%;top:2rem;}
+.mask .share .peri{width: 6.5rem;position: absolute;left: 0.5rem;bottom: 2rem;}
+.mask .share .fly{
+    -webkit-animation: fly 5s 0.5s forwards ease-in-out;
+    -o-animation: fly 5s 0.5s forwards ease-in-out;
+    animation: fly 5s 0.5s forwards ease-in-out;
+}
+/*动画部分*/
+/*p1*/
+.p1.swiper-slide-active .txt,
+.p2.swiper-slide-active .txt,
+.p3.swiper-slide-active .txt{
+		-webkit-animation: show 1s 1s forwards;
+	-o-animation: show 1s 1s forwards;
+	animation: show 1s 1s forwards;
+}
+
+.p1.swiper-slide-active .mooncake1{
+		-webkit-animation: down1 0.5s 0.5s forwards ease-in;
+	-o-animation: down1 0.5s 0.5s forwards ease-in;
+	animation: down1 0.5s 0.5s forwards ease-in;
+}
+.p1.swiper-slide-active .mooncake2{
+		-webkit-animation: down1 0.5s 0.7s forwards ease-in;
+	-o-animation: down1 0.5s 0.7s forwards ease-in;
+	animation: down1 0.5s 0.7s forwards ease-in;
+}
+.p1.swiper-slide-active .mooncake3{
+		-webkit-animation: down1 0.5s 0.9s forwards ease-in;
+	-o-animation: down1 0.5s 0.9s forwards ease-in;
+	animation: down1 0.5s 0.9s forwards ease-in;
+}
+.p1.swiper-slide-active .rili{
+	-webkit-transform-origin:10% 10%;
+		-webkit-animation: rili 2s 1.6s forwards;
+	-o-animation: rili 2s 1.6s forwards;
+	animation: rili 2s 1.6s forwards;
+}
+.p1.swiper-slide-active .flag{
+	-webkit-transform-origin:bottom center;
+		-webkit-animation: flag 4.5s 1.6s alternate;
+	-o-animation: flag 4.5s 1.6s alternate;
+	animation: flag 4.5s 1.6s alternate;
+}
+
+
+/*p2*/
+.p2.swiper-slide-active .pink_box{
+	-webkit-transform:translateY(-2rem);
+	-webkit-transition:all 1s .5s;
+}
+.p2.swiper-slide-active .yellow_box{
+	-webkit-transform:translateY(-2rem);
+	-webkit-transition:all 1s .75s;
+}
+.p2.swiper-slide-active .green_box{
+	-webkit-transform:translateY(-2rem);
+	-webkit-transition:all 1s 1s;
+}
+.p2.swiper-slide-active .txt2{opacity: 1;
+	-webkit-transition:all 1s 1.2s;
+	-webkit-animation: up_down 1s 1.2s infinite alternate linear;
+	-o-animation: up_down 1s 1.2s infinite alternate linear;
+	animation: up_down 1s 1.2s infinite alternate linear;
+}
+/*p3*/
+.p3.swiper-slide-active .box_1{
+	-webkit-animation: box_1 1s 0.5s forwards linear;
+	-o-animation: box_1 1s 0.5s forwards linear;
+	animation: box_1 1s 0.5s forwards linear;
+}
+.p3.swiper-slide-active .box_2{
+	-webkit-animation: box_2 1s 0.5s forwards linear;
+	-o-animation: box_2 1s 0.5s forwards linear;
+	animation: box_2 1s 0.5s forwards linear;
+}
+.p3.swiper-slide-active .box_3{
+	-webkit-animation: box_3 1s 0.5s forwards linear;
+	-o-animation: box_3 1s 0.5s forwards linear;
+	animation: box_3 1s 0.5s forwards linear;
+}
+.p3.swiper-slide-active .fly_moon_cake{
+	-webkit-animation: moon_cake 0.5s 1.7s forwards linear;
+	-o-animation: moon_cake 0.5s 1.7s forwards linear;
+	animation: moon_cake 0.5s 1.7s forwards linear;
+}
+.p3.swiper-slide-active .line{
+	-webkit-animation: show 0.3s 1.9s forwards linear;
+	-o-animation: show 0.3s 1.9s forwards linear;
+	animation: show 0.3s 1.9s forwards linear;
+}
+.p3.swiper-slide-active .dian{
+	-webkit-animation: show 0.3s 2.3s forwards linear;
+	-o-animation: show 0.3s 2.3s forwards linear;
+	animation: show 0.3s 2.3s forwards linear;
+}
+@-webkit-keyframes moon_cake{
+	0%{-webkit-transform:translate(0,0) rotate(0);opacity: 0}
+	100%{-webkit-transform:translate(-2.2rem,-1.1rem)rotate(780deg);opacity: 1}
+}
+@keyframes moon_cake{
+	0%{transform:translate(0,0) rotate(0);opacity: 0}
+	100%{transform:translate(-2.2rem,-1.1rem)rotate(780deg);opacity: 1}
+}
+
+@-webkit-keyframes box_1{
+	0%{-webkit-transform:translate(0,0);}
+	100%{-webkit-transform:translate(1.225rem,7rem);}
+}
+@keyframes box_1{
+	0%{transform:translate(0,0);}
+	100%{transform:translate(1.225rem,7rem);}
+}
+
+@-webkit-keyframes box_2{
+	0%{-webkit-transform:translate(0,0);}
+	100%{-webkit-transform:translate(4.5rem,-1.55rem);}
+}
+@keyframes box_2{
+	0%{transform:translate(0,0);}
+	100%{transform:translate(4.5rem,-1.55rem);}
+}
+
+@-webkit-keyframes box_3{
+	0%{-webkit-transform:translate(0,0);}
+	100%{-webkit-transform:translate(-5.7rem,-5.5rem);}
+}
+@keyframes box_3{
+	0%{transform:translate(0,0);}
+	100%{transform:translate(-5.7rem,-5.5rem);}
+}
+
+@-webkit-keyframes up_down{
+	0%{-webkit-transform:translateY(0);}
+	100%{-webkit-transform:translateY(-0.5rem);}
+}
+@keyframes up_down{
+	0%{transform:translateY(0);}
+	100%{transform:translateY(-0.5rem);}
+}
+
+@-webkit-keyframes up{
+	from{-webkit-transform:translateY(0);}
+	to{-webkit-transform:translateY(-2rem);}
+}
+@keyframes up{
+	from{transform:translateY(0);}
+	to{transform:translateY(-2rem);}
+}
+
+@-webkit-keyframes fly{
+    from{-webkit-transform:translate(0);}
+    to{-webkit-transform:translate(110%,-260%);}
+}
+@keyframes fly{
+	from{transform:translate(0);}
+	to{transform:translate(110%,-260%);}
+}
+
+@-webkit-keyframes show{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+@keyframes show{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+@-webkit-keyframes rili{
+	0%{-webkit-transform:rotate(0);}
+	40%{-webkit-transform:rotate(40deg);}
+	70%{-webkit-transform:rotate(30deg);}
+	100%{-webkit-transform:rotate(35deg);}
+}
+@keyframes rili{
+	0%{transform:rotate(0);}
+	40%{transform:rotate(40deg);}
+	70%{transform:rotate(30deg);}
+	100%{transform:rotate(35deg);}
+}
+
+@-webkit-keyframes flag{
+	0%{-webkit-transform:rotate(0deg);}
+	10%{-webkit-transform:rotate(30deg);}
+	20%{-webkit-transform:rotate(-30deg);}
+	30%{-webkit-transform:rotate(30deg);}
+	40%{-webkit-transform:rotate(-30deg);}
+	50%{-webkit-transform:rotate(30deg);}
+	60%{-webkit-transform:rotate(-30deg);}
+	70%{-webkit-transform:rotate(30deg);}
+	80%{-webkit-transform:rotate(-30deg);}
+	90%{-webkit-transform:rotate(30deg);}
+	100%{-webkit-transform:rotate(0deg);}
+}
+@keyframes flag{
+	0%{transform:rotate(0deg);}
+	10%{transform:rotate(30deg);}
+	20%{transform:rotate(-30deg);}
+	30%{transform:rotate(30deg);}
+	40%{transform:rotate(-30deg);}
+	50%{transform:rotate(30deg);}
+	60%{transform:rotate(-30deg);}
+	70%{transform:rotate(30deg);}
+	80%{transform:rotate(-30deg);}
+	90%{transform:rotate(30deg);}
+	100%{transform:rotate(0deg);}
+}
+
+@-webkit-keyframes down1{
+	0%{-webkit-transform:translateY(-20rem);}
+	100%{-webkit-transform:translateY(0);}
+}
+@keyframes down1{
+	0%{transform:translateY(-20rem);}
+	100%{transform:translateY(0);}
+}
+
+
+
+@-webkit-keyframes loading_zhuan{
+    from{-webkit-transform:rotate(0);}
+    to{-webkit-transform:rotate(-360deg);}
+}
+@-webkit-keyframes loading_zhuan2{
+    from{-webkit-transform:rotate(0);}
+    to{-webkit-transform:rotate(360deg);}
+}
+.p4.swiper-slide-active .moon{
+    -webkit-transform:translate(-42%,-60%);-webkit-transition:all 2s 0.5s;
+}
+
+
+/* music */
+.music{
+    z-index:80;position:absolute; top:20px; right:20px; width:28px; height:28px;
+    background:url(../img/music.png);
+    background-size:28px 28px;
+}
+
+.rotate{
+
+    -webkit-animation: rotate 2s infinite linear;
+    -moz-animation: rotate 2s infinite linear;
+    animation: rotate 2s infinite linear;
+
+}
+
+@-moz-keyframes rotate {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes rotate {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes rotate {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}

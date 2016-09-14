@@ -1,0 +1,94 @@
+{
+  "files": [
+    {
+      "type": "SCRIPT",
+      "source": "./static/js/jQuery/plugin/jquery.html5loader-master/src/jquery.html5Loader.min.js",
+      "size": 7270.4
+    },
+    {
+      "type": "SCRIPT",
+      "source": "./static/js/jQuery/ui/jquery-ui-1.11.4.custom/jquery-ui.min.js",
+      "size": 240640
+    },
+    {
+      "type": "SCRIPT",
+      "source": "./media/js/rem_w.js",
+      "size": 1024
+    },
+    {
+      "type": "SCRIPT",
+      "source": "./raindrops/raindrops.customer.js",
+      "size": 5120
+    },
+    {
+      "type": "SCRIPT",
+      "source": "./vsstamp/vsstamp_jquery-master/jquery.vsstamp.customer.js?_=201511181902",
+      "size": 6656
+    },
+    {
+      "type": "CSS",
+      "source": "./vsstamp/vsstamp_jquery-master/css/vsstamp.customer.css?_=201511181902",
+      "size": 3584
+    },
+    {
+      "type": "IMAGE",
+      "source": "./media/awardCoffee3.png",
+      "size": 17715.2
+    },
+    {
+      "type": "IMAGE",
+      "source": "./media/logo.png",
+      "size": 2560
+    },
+    {
+      "type": "IMAGE",
+      "source": "./media/outlet.png",
+      "size": 500
+    },
+    {
+      "type": "IMAGE",
+      "source": "./media/water.png",
+      "size": 2355.2
+    },
+    {
+      "type": "IMAGE",
+      "source": "./media/cup.png",
+      "size": 8806.4
+    },
+    {
+      "type": "IMAGE",
+      "source": "./media/star_white.png",
+      "size": 2150.4
+    },
+    {
+      "type": "IMAGE",
+      "source": "./media/star_red.png",
+      "size": 2764.8
+    },
+    {
+      "type": "AUDIO",
+      "sources": {
+        "mp3": {
+          "source": "./media/stamp_success.mp3",
+          "size": 37580.8
+        },
+        "mp3": {
+          "source": "./media/stamp_error.mp3",
+          "size": 11264
+        },
+        "mp3": {
+          "source": "./media/stamp_get1.mp3",
+          "size": 5632
+        },
+        "mp3": {
+          "source": "./media/pour.mp3",
+          "size": 17100.8
+        },
+        "mp3": {
+          "source": "./media/watermachine.mp3",
+          "size": 21811.2
+        }
+      }
+    }
+  ]
+}

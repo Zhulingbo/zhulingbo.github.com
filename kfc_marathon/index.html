@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>KFC</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+	<link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+<div class="mask loading">
+	<div class="main">
+		<div class="run">
+		</div>
+		<p><em>0</em>%</p>
+	</div>
+</div>
+<div class="mask signed_mask">
+	<div class="main">
+		<p>您已报名</p>
+		<a href="javascript:;" class="close">
+			<img src="img/close.png" width="100%">
+		</a>
+	</div>
+</div>
+<!-- mask -->
+<div class="mask match_detail">
+	<div class="main">
+		<h2>赛事详情</h2>
+		<p>
+		北京马拉松是具有国际影响力的中国最高水平马拉松赛，2016北马开赛在即，不用抽签就能赢得北京马拉松参赛机会，快来加入肯德基跑团吧！<br>
+		<br>
+		<b>本次招募赛程组别</b><br>
+		42.195公里全程马拉松<br>
+ 		<br>
+		<b>比赛时间</b><br>
+		9月17日上午7点30开始<br>
+ 		<br>
+		<b>报名开放时间</b><br>
+		2016年8月9日10点－2016年8月14日18点<br>
+		<br>
+		<b>参赛资格</b><br>
+		1、本次肯德基跑团名额仅限肯德基员工与WOW会员。<br>
+		2、报名者优先录取为2014年1月1日至2016年6月27日期间参加过全程马拉松项目，并在6小时内完赛的选手或2015年1月1日至2016年6月27日期间参加过半程马拉松项目，并在3小时内完赛的选手。
+		</p>
+		<a href="javascript:;" class="close">
+			<img src="img/close.png" width="100%">
+		</a>
+	</div>
+</div>
+<!-- mask -->
+<div class="mask apply_mask">
+	<div class="main">
+		<a href="javascript:;" class="kfc_office">我是肯德基员工</a>
+		<a href="javascript:;" class="kfcwow_office">我是肯德基WOW会员</a>
+		<a href="javascript:;" class="close">
+			<img src="img/close2.png" width="100%">
+		</a>
+	</div>
+</div>
+<!-- container -->
+<div class="container home">
+	<div class="spot clearfix">
+		<span></span><span></span><span></span>
+	</div>
+	<img src="img/logo.png" alt="" class="logo">
+	<img src="img/title.png" alt="" class="title">
+	<div class="btn">
+		<a href="javascript:;" class="match">赛事详情</a>
+		<a href="javascript:;" class="apply">我要报名</a>
+		<img src="img/btn_shadow.png" alt="" class="shadow1">
+		<img src="img/btn_shadow.png" alt="" class="shadow2">
+	</div>
+	<div class="txt">
+		<p>*仅限肯德基员工/肯德基WOW会员报名（110名）</p>
+		<p>*报名成功者统一获得参赛装备，统一指定地点起跑</p>
+		<p>*本次赛事交通、食宿费用自理</p>
+		<p>*所有报名者均可获得肯德基WOW会员香辣鸡腿汉堡优惠券一张</p>
+	</div>
+</div>
+<!-- container -->
+<script src="js/app.js" id="appjs" data-adapt="1" ></script>
+<script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
+<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	var loaded = 0;
+		if ($('.container img[src]').length === 0 || navigator.userAgent.indexOf('MSIE 9') != -1){
+		}else{
+		   $('.container').imagesLoaded().progress(function(instance,image){
+		       loaded ++ ;
+		       if (loaded == instance.images.length) {
+		           setTimeout(function () {
+		               $('.loading').fadeOut();
+		               $(".home").fadeIn();
+		           }, 100);
+		       }
+		   });
+		}
+
+	$(".match").on('touchstart',function(){
+		$(".match_detail").show();
+	})
+	$(".match_detail .close").on('touchstart',function(){
+		$(".match_detail").hide();
+	})
+
+	$(".apply").on('touchstart',function(){
+		$(".apply_mask").show();
+	})
+	$(".apply_mask .close").on('touchstart',function(){
+		$(".apply_mask").hide();
+	})
+});
+</script>
+</body>
+</html>
