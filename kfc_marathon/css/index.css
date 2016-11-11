@@ -137,10 +137,10 @@ html,body,.container{width: 100%;height: 100%;overflow: hidden;position: relativ
 .right_file .main p{color: #fff;text-align: center;}
 .right_file .main .close{width: 1rem;height: 1rem;display: block;position: absolute;right: 3%;top: 5%;}
 
-.loading{background-color: #de1b09;display: block;}
-.loading .main{width: 49px;margin: 50% auto auto auto;}
+.loading{background-color: #fff;display: block;}
+/*.loading .main{width: 49px;margin: 50% auto auto auto;}
 .loading .main .run{width: 49px;height: 57px;background: url('../img/run.png') no-repeat;background-position: 0 0;background-size: 245px 100%;-webkit-animation:run 0.5s steps(5) infinite;}
-.loading .main p{text-align: center;color: #fff;}
+.loading .main p{text-align: center;color: #fff;}*/
 
 .question_mark{width: 0.75rem;height: 0.75rem;display: block;background: url('../img/question_mark.png') no-repeat;background-size:100% 100%;position: absolute;right: 0.15rem;top: 0.15rem;}
 .hint{width: 6.75rem;height: 2.6rem;position: absolute;top: -2.6rem;right: 0;display: none;}
@@ -169,12 +169,20 @@ html,body,.container{width: 100%;height: 100%;overflow: hidden;position: relativ
 .box2 em{width: auto;}
 .box3{width: 60%;float: right;}
 
+/*.house{width: 101px;height: 72.5px;overflow: hidden;}*/
+.water{width: 101px;background-color: #9594e2;position: absolute;left: 0;bottom: 0;}
 
+.loading .main{width: 101px;height: 72.5px;overflow: hidden;position: relative;position: absolute;left: 50%;top: 50%;-webkit-transform:translate(-50%,-50%);}
+.loading .main .house{width: 100%;position: relative;z-index: 50;}
+.wave{width: 303px;height: 23px;background: url('../img/water.png') repeat-x;background-size: 50.5px 11.5px;position: absolute;left: 50%;top: -10px;margin-left: -151.5px;
+	-webkit-animation: wave 3.5s 0.5s infinite linear;
+	-o-animation: wave 3.5s 0.5s infinite linear;
+	animation: wave 3.5s 0.5s infinite linear;
+}
+.loading p{color: #6317b8;text-align:center; line-height: 60px;width: 100%;position: absolute;left: 0;top: 0;font-weight: 700;font-size: 20px;margin-top: 15px;}
 
-
-
-
-
-
-
+@-webkit-keyframes wave{
+	0%{-webkit-transform:translateX(0);}
+	100%{-webkit-transform:translateX(101px);}
+}
 

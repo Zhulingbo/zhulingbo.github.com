@@ -19,9 +19,13 @@
 <body>
 <div class="mask loading">
 	<div class="main">
-		<div class="run">
+		<img src="img/house.png" width="100%" class="house">
+		<div class="water" style="height:50%">
+			<div class="wave">
+				
+			</div>
 		</div>
-		<p><em>0</em>%</p>
+		<p>50<em>%</em>u</p>
 	</div>
 </div>
 <div class="mask signed_mask">
@@ -93,19 +97,19 @@
 <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
 <script type="text/javascript">
 $(function() {
-	var loaded = 0;
-		if ($('.container img[src]').length === 0 || navigator.userAgent.indexOf('MSIE 9') != -1){
-		}else{
-		   $('.container').imagesLoaded().progress(function(instance,image){
-		       loaded ++ ;
-		       if (loaded == instance.images.length) {
-		           setTimeout(function () {
-		               $('.loading').fadeOut();
-		               $(".home").fadeIn();
-		           }, 100);
-		       }
-		   });
-		}
+	// var loaded = 0;
+	// 	if ($('.container img[src]').length === 0 || navigator.userAgent.indexOf('MSIE 9') != -1){
+	// 	}else{
+	// 	   $('.container').imagesLoaded().progress(function(instance,image){
+	// 	       loaded ++ ;
+	// 	       if (loaded == instance.images.length) {
+	// 	           setTimeout(function () {
+	// 	               $('.loading').fadeOut();
+	// 	               $(".home").fadeIn();
+	// 	           }, 100);
+	// 	       }
+	// 	   });
+	// 	}
 
 	$(".match").on('touchstart',function(){
 		$(".match_detail").show();
