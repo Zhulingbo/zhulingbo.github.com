@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>KFC</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!--<script src="http://local.uniqlo.wx.verystar.cn/assets/js/jquery-2.1.1.min.js"></script>-->
+    <script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script src="js/app.js" id="appjs" data-init="1" ></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<!-- mask -->
+	<div class="popup qr_popup">
+		<p>长按二维码，关注肯德基官方微信</p>
+		<div class="box">
+			<img src="img/qr.jpg" class="qr">
+		</div>
+		<a href="javascript:;" class="close">
+			<img src="img/close.png" width="100%">
+		</a>
+	</div>
+	<!-- mask -->
+	<div class="popup finish_popup">
+		<div class="box">
+			<p>您已成功提交中奖递送信息，<br>
+奖品将于 5 个工作日内寄出，<br>
+请耐心等待。</p>
+		</div>
+		<a href="index.html" class="close">
+			<img src="img/close.png" width="100%">
+		</a>
+	</div>
+	<!-- mask -->
+	<div class="popup put_popup">
+		<div class="box">
+			<p>您已成功提交过中奖信息，<br>如需修改请重新填写</p>
+		</div>
+		<a href="javascript:;" class="close">
+			<img src="img/close.png" width="100%">
+		</a>
+	</div>
+	<!-- container -->
+	<div class="container prize">
+		<a href="javascript:;" class="rule">活动规则</a>
+		<div class="title">
+			<img src="img/prize_title.png" height="100%">
+		</div>
+		<!-- 奖品为兔子的时候出现 -->
+		<div class="check_in">
+			<div class="inp">
+				<div class="inp_txt">
+					<span>姓名</span>
+					<input type="text">
+				</div>
+				<div class="inp_txt">
+					<span>电话</span>
+					<input type="text">
+				</div>
+				<div class="inp_txt">
+					<span>地址</span>
+					<input type="text">
+				</div>
+			</div>
+			<a href="javascript:;" class="put_in">
+				<img src="img/put.png" width="100%">
+			</a>
+		</div>
+		<p class="zs">请正确填写提交奖品递送信息，奖品将于确认领奖事宜后的<br>
+5个工作日内通过快递寄出。感谢您对我们活动的支持！</p>
+		<!-- 奖品为鸡翅的时候显示【领取卡券】按钮 -->
+		<!-- <a href="javascript:;" class="button get_ticket">
+			<img src="img/get_ticket.png" width="100%">
+		</a> -->
+		<div class="logo">
+			<img src="img/index_logo.png" width="100%">
+			<a href="javascript:;" class="follow move">
+				<img src="img/follow.png" width="100%">
+			</a>
+		</div>
+	</div>
+	<!-- container -->
+</body>
+<script>
+$(function() {
+//	$(window).on('scroll.elasticity', function (e) {
+//e.preventDefault();
+//}).on('touchmove.elasticity', function (e) {
+//e.preventDefault();
+//});
+	var height=$(window).height();
+	$('body').height(height);
+	//
+	$(".move").on('click', function(event) {
+		$(".qr_popup").addClass('popup_move');
+		$(".put_popup,.finish_popup").removeClass('popup_move');
+	});
+	$(".qr_popup .close").on('click', function(event) {
+		$(".qr_popup").removeClass('popup_move');
+	});
+	$(".put_popup .close").on('click', function(event) {
+		$(".put_popup").removeClass('popup_move');
+	});
+	////
+	$(".put_in").on('click',function(event) {
+		$(".finish_popup").addClass('popup_move');
+		$(".put_popup,.qr_popup").removeClass('popup_move');
+	});
+	$(".close").on('click', function(event) {
+		$(".finish_popup").removeClass('popup_move');
+	});
+	////
+	$(".rule").on('click',function(event) {
+		$(".mask").show();
+		myScroll = new IScroll('#wrapper', { scrollY: true, scrollbars: 'custom' });
+		$(".follow").removeClass('move');
+	});
+	//
+	$(".rule_close").on('click',function(event) {
+		$(".mask").hide();
+	});
+		//重新填写的弹层
+	setTimeout(function(){
+		$(".put_popup").addClass('popup_move');
+	},200)
+});
+</script>

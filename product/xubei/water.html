@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!--<script src="http://local.uniqlo.wx.verystar.cn/assets/js/jquery-2.1.1.min.js"></script>-->
+    <script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
+    <script type="text/javascript" src="js/rem_w.js"></script>
+    <link rel="stylesheet" href="css/index.css?t=6" />
+</head>
+<body>
+<!-- mask -->
+<!-- true -->
+<div class="mask result_true" style="display:none">
+	<div class="content">
+		<img src="img/true_title.png" class="tit">
+		<img src="img/true_title2.png" class="tit2">
+		<p>现在购买肯德基哆啦A梦套餐<br>
+<em>即可赠送套餐自带同款饮料一杯！</em><br>
+ 将优惠券保存到卡包 ,马上去兑！</p>
+ 		<a href="javascript:;" class="save">
+ 			<img src="img/get_ticket.png" width="100%">
+ 		</a>
+	</div>
+</div>
+<!-- true -->
+<!-- get_one -->
+<div class="mask get_one" style="display:none">
+	<div class="content">
+		<img src="img/get_title.jpg" class="tit">
+		<img src="img/get_txt.png" class="txt">
+		<a href="javascript:;" class="know">
+			<img src="img/know_btn.png" width="100%">
+		</a>
+	</div>
+</div>
+<!-- get_one -->
+<!-- sorry -->
+<div class="mask sorry" style="display:none">
+	<div class="content">
+		<img src="img/get_title.jpg" class="tit">
+		<img src="img/sorry_txt.png" class="txt">
+		<a href="javascript:;" class="know">
+			<img src="img/know_btn.png" width="100%">
+		</a>
+	</div>
+</div>
+<!-- sorry -->
+<!-- mask -->
+<!-- container -->
+<div class="container">
+	<img src="img/logo.png" class="logo">
+	<a href="javascript:;" class="rule_btn">
+		<img src="img/rule_btn.png" width="100%">
+	</a>
+	<img src="img/copy_right.png" class="copy">
+	<!-- water -->
+	<div class="water">
+		<img src="img/choose_tit.png" class="tit">
+		<span class="button"></span>
+		<div class="water_cooler">
+			<img src="img/water_cooler_bg.png" width="100%">
+			<div class="lid">
+				<img src="img/water_line.png" class="line">
+				<img src="img/water_cooler_lid.png" width="100%" class="water_cooler_lid">
+			</div>
+			<div class="cup">
+				<img src="img/empty_cup4.png" width="100%" class="empty_cup">
+				<img src="img/inner_water.png" class="inner_water">
+				<!-- 水花 -->
+				<div class="spray">
+					<img src="img/spray_left.png" class="spray_left">
+					<img src="img/spray_right.png" class="spray_right">
+				</div>
+				<!-- 水花 -->
+			</div>
+			<img src="img/water_sound.png" class="sound">
+		</div>
+		<img src="img/water_cat.png" class="cat">
+		<img src="img/water_cloud.png" class="water_cloud">
+	</div>
+	<!-- water -->
+</div>
+<!-- container -->
+</body>
+<script type="text/javascript">
+	$(function() {
+		$('body').on('touchmove', function (event) {
+	      event.preventDefault();  
+	  });
+		$(".button").on('mousedown',function(event) {
+			$(".line").addClass('water_down');
+			$(".inner_water").addClass('big_water');
+			$(".spray_left").addClass('spray_dong_left');
+			$(".spray_right").addClass('spray_dong_right');
+			$(".sound").addClass('sound_show');
+		});
+		$('.inner_water')[0].addEventListener('webkitAnimationEnd', function(){
+			$(".result_true").show();//弹层result_true/get_one/sorry
+			$(".line").removeClass('water_down');
+			$(".inner_water").removeClass('big_water');
+			$(".spray_left").removeClass('spray_dong_left');
+			$(".spray_right").removeClass('spray_dong_right');
+			$(".sound").removeClass('sound_show');
+		}, false)
+		$(".know").on('click',function(event) {
+			$(".mask").hide();
+		});
+	});
+</script>

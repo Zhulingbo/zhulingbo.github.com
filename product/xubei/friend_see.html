@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
+    <script type="text/javascript" src="js/rem_w.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <link rel="stylesheet" href="css/index.css"/>
+    <style type="text/css">
+#wrapper {
+	width: 100%;
+	position: relative;
+	height: 13rem;
+	overflow: hidden;
+
+	/* Prevent native touch events on Windows */
+	-ms-touch-action: none;
+
+	/* Prevent the callout on tap-hold and text selection */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	/* Prevent text resize on orientation change, useful for web-apps */
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+#scroller {
+	padding: 0 10px;
+	box-sizing:border-box;
+	position: absolute;
+
+	/* Prevent elements to be highlighted on tap */
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+
+	/* Put the scroller into the HW Compositing layer right from the start */
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+.iScrollVerticalScrollbar {
+	position: absolute;
+	z-index: 9999;
+	width: 5px;
+	bottom: 2px;
+	top: 2px;
+	right: 0px;
+	overflow: hidden;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border:1px solid #2bace2;
+}
+.iScrollVerticalScrollbar .iScrollIndicator {
+		border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background-color: #2bace2;
+	width: 100%;
+}
+@media only screen and (max-height:416px ) {
+	#wrapper{height: 11rem;}
+}
+    </style>
+</head>
+<body>
+<!-- mask -->
+<div class="mask rule" style="display:none">
+	<div class="rule_main">
+		<div class="rule_in">
+			<img src="img/rule_tit.png" class="tit">
+				<div id="wrapper">
+					<div id="scroller">
+						<p>参与方式：<br>
+1.活动期间，关注肯德基官方微信，参加“哆啦A梦 请客啦！”活动。<br>
+2.选取哆啦A梦马克杯，按住杯体将饮料接满即视为成功参与。参与的用户可得到续杯券一张。<br>
+3.活动期间，每个微信号仅可获得一张续杯券。<br>
+<br>
+续杯券使用说明：<br>
+请在餐厅现场收银员的指导下点击确认使用。<br>
+1）有效期：2015年11月2日～2015年11月29日，仅限正餐时段（9:30-23:00）使用。<br>
+2）购买肯德基哆啦A梦套餐，凭续杯券即可额外获得套餐内相同饮料一杯。<br>
+3）续杯券必须购买哆啦A梦套餐方可使用。哆啦A梦套餐11月2日起上市，全国共计90万份，售完即止。若餐厅套餐售罄，续杯券将无法使用，敬请谅解。<br>
+4）本券仅限在有此产品供应的中国大陆肯德基餐厅使用，交通枢纽、旅游景区的餐厅以及精选餐厅除外。具体情况以餐厅公示为准。<br>
+5）仅限微信卡包中出示使用，每张仅限使用一次，截屏、复制、修改无效。 <br>
+6）不适用于肯德基宅急送，不适用于肯德基甜品站。
+					</p>
+					</div>
+				</div>	
+			<a href="javascript:;" class="close">
+				<img src="img/rule_close.png" width="100%">
+			</a>
+		</div>
+	</div>
+</div>
+<!-- mask -->
+<!-- container -->
+<div class="container">
+	<img src="img/logo.png" class="logo">
+	<a href="javascript:;" class="rule_btn">
+		<img src="img/rule_btn.png" width="100%">
+	</a>
+	<img src="img/copy_right.png" class="copy">
+<!-- congratulation -->
+<div class="friend_see">
+	<div class="tit">
+		<img src="img/join_tit.png" height="100%">
+	</div>
+	<div class="txt">
+		<img src="img/friend_txt.png" height="100%">
+	</div>
+		<a href="index.html" class="join">
+		<img src="img/join_in.png" width="100%">
+		<img src="img/bell2.png" class="bell_2">
+	</a>
+	<img src="img/congratulation_cat.png" class="cat">
+	<img src="img/copy_right_bg.png" alt="" class="cr_bg">
+</div>
+<!-- congratulation -->
+</div>
+<!-- container -->
+</body>
+<script type="text/javascript">
+$(function() {
+	$('body').on('touchmove', function (event) {
+	      event.preventDefault();  
+	  });
+	$(".rule_btn").on('click',function(event) {
+		$(".mask").show();
+		myScroll = new IScroll('#wrapper', { scrollY: true, scrollbars: 'custom' });
+	});
+	$(".close").on('click',function(event) {
+		$(".mask").hide();
+	});
+});
+</script>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>KFC</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!--<script src="http://local.uniqlo.wx.verystar.cn/assets/js/jquery-2.1.1.min.js"></script>-->
+    <script type="text/javascript" src="js/jquery.min2.0.3.js" ></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script src="js/app.js" id="appjs" data-init="1" ></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<!-- mask -->
+	<div class="popup qr_popup">
+		<p>长按二维码，关注肯德基官方微信</p>
+		<div class="box">
+			<img src="img/qr.jpg" class="qr">
+		</div>
+		<a href="javascript:;" class="close">
+			<img src="img/close.png" width="100%">
+		</a>
+	</div>
+	<!-- mask -->
+	<!-- mask -->
+	<div class="mask rule_mask">
+		<div class="rule_main">
+			<div id="wrapper">
+				<div id="scroller">
+					<h2>肯德基 越来越圣诞</h2>
+					<p>
+活动时间：2015年12月10日至2015年12月12日<br>
+<br>
+抽奖方式：<br>
+	●	活动期间，进入活动页面，点击首页下方“抽取圣诞彩蛋”按钮，即可获得一次抽奖机会，抽奖后即时显示结果信息。<br>
+	●	每个微信账号只有一次抽奖机会。<br>
+	●	本活动采取后台随机抽奖的方式。<br>
+<br>
+奖项设置：<br>
+	●	阳光普照奖：肯德基圣诞优惠券<br>
+	●	限量好礼：肯德基全球限量-身高52cm的超萌大啵兔玩偶（仅限100份）<br>
+<br>
+活动须知：<br>
+	●	限量好礼中奖者需按照要求提供准确的个人信息（含：真实姓名、邮寄地址、邮政编码及联系电话），未能按时完整回复者，奖项自动作废。<br>
+	●	所有实物奖品将于5个工作日内通过快递寄出，如因中奖人提供个人信息不全或有误（包括真实姓名、邮寄地址、邮政编码及联系电话等），导致奖品无法递送，主办方不为此承担任何责任。<br>
+	●	本活动奖项一经确认不得转换、转让或折换现金，奖品规格外观以实物为准。<br>
+	●	如对本活动有任何疑问，可关注“肯德基”官方微信账号进行咨询。<br>
+<br>
+其它：<br>
+	●	本次活动的主办方为百胜餐饮集团中国事业部肯德
+					</p>
+				</div>
+			</div>
+			<a href="javascript:;" class="rule_close">
+					<img src="img/rule_close.png" width="100%">
+				</a>
+		</div>
+	</div>
+	<!-- mask -->
+	<!-- container -->
+	<div class="container index">
+		<a href="javascript:;" class="rule">活动规则</a>
+		<div class="title">
+			<img src="img/index_pic.png" height="100%">
+		</div>
+		<img src="img/shear.png" class="shear">
+		<a href="javascript:;" class="button act_finish">
+			<img src="img/act_finish.png" width="100%">
+		</a>
+		<div class="logo">
+			<img src="img/index_logo.png" width="100%">
+			<a href="javascript:;" class="follow move">
+				<img src="img/follow.png" width="100%">
+			</a>
+		</div>
+	</div>
+	<!-- container -->
+</body>
+<script>
+$(function() {
+	$(".move").on('click', function(event) {
+		$(".popup").addClass('popup_move');
+	});
+	$(".close").on('click', function(event) {
+		$(".popup").removeClass('popup_move');
+	});
+	$(".rule").on('click',function(event) {
+		$(".mask").show();
+		myScroll = new IScroll('#wrapper', { scrollY: true, scrollbars: 'custom' });
+		$(".follow").removeClass('move');
+	});
+	$(".rule_close").on('click',function(event) {
+		$(".mask").hide();
+	});
+		//
+});
+</script>

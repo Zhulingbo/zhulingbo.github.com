@@ -1,0 +1,9 @@
+diff a/pizzahut/king_glory/index.html b/pizzahut/king_glory/index.html	(rejected hunks)
+@@ -111,7 +111,6 @@
+ 				</div>
+ 			</div>
+ 			<!--套餐page4-->
+-			<div class="swiper-slide set_meal swiper-no-swiping">
+ 			<div class="swiper-slide set_meal">
+ 				<div class="mask">
+ 					<div class="main">
